@@ -18,7 +18,7 @@
 <body>
 
   <!-- HERO -->
-  <header class="hero" data-aos="fade-up" data-aos-duration="900">
+  <header class="hero" data-aos="fade-up">
     <h1>Hi, I'm Hrithik M</h1>
 
     <p class="hero-tagline">
@@ -32,7 +32,7 @@
 
     <div class="hero-buttons">
       <a href="#resume" class="btn primary">📄 View Resume</a>
-      <a href="#contact" class="btn secondary">✉️ Contact</a>
+      <a href="#connect" class="btn secondary">🔗 Let’s Connect</a>
     </div>
 
     <button id="theme-toggle">🌙 Dark Mode</button>
@@ -41,7 +41,7 @@
   <main>
 
     <!-- RESUME -->
-    <section id="resume" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+    <section id="resume" data-aos="fade-up">
       <h2>Resume</h2>
       <p>You can view or download my resume below.</p>
 
@@ -52,7 +52,7 @@
     </section>
 
     <!-- ABOUT -->
-    <section data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
+    <section data-aos="fade-up">
       <h2>About Me</h2>
       <p>
         I am an Electronics and Communication Engineering student at VIT Vellore with a strong
@@ -65,11 +65,10 @@
     </section>
 
     <!-- SKILLS -->
-    <section data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+    <section data-aos="fade-up">
       <h2>Skills</h2>
 
       <div class="skills-grid">
-
         <div class="skill-card">
           <h3>Programming & Tools</h3>
           <div class="skill-tags">
@@ -89,19 +88,15 @@
             <span>FPGA (Basic)</span>
           </div>
         </div>
-
       </div>
     </section>
 
     <!-- PROJECTS -->
-    <section data-aos="fade-up" data-aos-duration="800" data-aos-delay="250">
+    <section data-aos="fade-up">
       <h2>Projects</h2>
 
       <div class="projects-grid">
-
-        <div class="project-card"
-             data-aos="fade-right"
-             data-aos-duration="900">
+        <div class="project-card" data-aos="fade-right">
           <h3>ESP32-based Prosthetic Arm</h3>
           <p>
             Designed and implemented a prosthetic arm using ESP32 and Arduino,
@@ -114,10 +109,7 @@
           </div>
         </div>
 
-        <div class="project-card"
-             data-aos="fade-left"
-             data-aos-duration="900"
-             data-aos-delay="150">
+        <div class="project-card" data-aos="fade-left">
           <h3>FPGA-based Traffic Light Controller</h3>
           <p>
             Implemented a traffic light control system using FPGA and Verilog HDL
@@ -129,25 +121,46 @@
             <span>Digital Design</span>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-      <h2>Contact</h2>
-      <p>📧 Email: hrithik1413@gmail.com</p>
-      <p>🔗 LinkedIn: Hrithik M</p>
+    <!-- LET'S CONNECT -->
+    <section id="connect" class="connect" data-aos="fade-up">
+      <h2>Let’s Connect</h2>
+      <p class="connect-text">
+        If you’d like to connect, collaborate, or discuss opportunities,
+        feel free to reach out.
+      </p>
+
+      <div class="connect-links">
+        <a href="mailto:hrithik1413@gmail.com">📧 hrithik1413@gmail.com</a>
+
+        <a href="https://www.linkedin.com/in/hrithik-m-795741375"
+           target="_blank" rel="noopener">
+          🔗 LinkedIn Profile
+        </a>
+      </div>
     </section>
 
   </main>
 
-  <footer data-aos="fade-up" data-aos-duration="800" data-aos-delay="350">
+  <footer>
     <p>© 2025 Hrithik M</p>
   </footer>
 
   <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="script.js"></script>
+  <script>
+    AOS.init({ once: false });
+  </script>
+
+  <!-- Dark mode toggle -->
+  <script>
+    const toggle = document.getElementById("theme-toggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+    });
+  </script>
+
 </body>
 </html>
