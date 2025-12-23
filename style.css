@@ -1,305 +1,192 @@
 :root {
-  --accent: #4da3ff;
-  --text-light: #1c1c1c;
-  --text-dark: #eaeaea;
+  --blue: #4da3ff;
+  --dark-bg: radial-gradient(circle at top left, #1a2433, #0a0d14 70%);
+  --light-bg: radial-gradient(circle at top left, #dbeafe, #f8fafc 70%);
+  --card-dark: rgba(255,255,255,0.06);
+  --card-light: #ffffff;
 }
 
-/* =========================
-   RESET
-========================= */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-/* =========================
-   BODY — LIGHT MODE
-========================= */
-body {
   font-family: 'Poppins', sans-serif;
-  line-height: 1.7;
-  color: var(--text-light);
-  background:
-    radial-gradient(900px 500px at 15% 10%, rgba(80,160,255,0.25), transparent 60%),
-    radial-gradient(900px 500px at 85% 90%, rgba(180,200,255,0.25), transparent 60%),
-    linear-gradient(180deg, #f6f8fb, #eef2f7);
-  transition: background 0.4s ease, color 0.3s ease;
 }
 
-/* =========================
-   DARK MODE
-========================= */
+body {
+  min-height: 100vh;
+  padding: 60px 20px;
+  transition: 0.3s;
+}
+
+/* THEMES */
 body.dark {
-  color: var(--text-dark);
-  background:
-    radial-gradient(900px 500px at 15% 10%, rgba(70,140,255,0.25), transparent 60%),
-    radial-gradient(900px 500px at 85% 90%, rgba(120,80,200,0.25), transparent 60%),
-    linear-gradient(180deg, #0e1014, #12151b);
+  background: var(--dark-bg);
+  color: #e5e7eb;
 }
 
-/* =========================
-   HERO
-========================= */
+body.light {
+  background: var(--light-bg);
+  color: #111827;
+}
+
+/* HERO */
 .hero {
   text-align: center;
-  padding: 90px 20px 80px;
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 80px;
 }
 
 .hero h1 {
-  font-size: 42px;
-  font-weight: 700;
-  margin-bottom: 18px;
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
-.hero-tagline {
-  font-size: 18px;
+.hero h1 span {
+  color: var(--blue);
+}
+
+.hero h2 {
+  color: var(--blue);
+  margin-bottom: 20px;
+}
+
+.hero p {
+  line-height: 1.8;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 14px 26px;
+  border-radius: 30px;
   font-weight: 600;
-  color: var(--accent);
-  margin-bottom: 18px;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.hero-text {
-  max-width: 720px;
-  margin: 0 auto 34px;
-  opacity: 0.85;
+.primary {
+  background: var(--blue);
+  color: white;
 }
 
-/* =========================
-   BUTTONS
-========================= */
+.outline {
+  border: 2px solid var(--blue);
+  color: var(--blue);
+}
+
 .hero-buttons {
   display: flex;
-  justify-content: center;
-  gap: 18px;
-  margin-bottom: 26px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  padding: 12px 26px;
-  border-radius: 999px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.25s ease;
-}
-
-.btn.primary {
-  background: linear-gradient(135deg, #4da3ff, #6bb5ff);
-  color: #fff;
-}
-
-.btn.secondary {
-  border: 2px solid var(--accent);
-  color: var(--accent);
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
-}
-
-/* =========================
-   TOGGLE
-========================= */
-#theme-toggle {
-  margin-top: 10px;
-  padding: 10px 22px;
-  border-radius: 999px;
-  border: 2px solid var(--accent);
-  background: transparent;
-  color: inherit;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-/* =========================
-   MAIN
-========================= */
-main {
-  max-width: 1000px;
-  margin: auto;
-}
-
-/* =========================
-   SECTIONS
-========================= */
-section {
-  margin: 40px 20px;
-  padding: 38px;
-  border-radius: 22px;
-  background: rgba(255,255,255,0.85);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
-}
-
-body.dark section {
-  background: rgba(25,25,35,0.9);
-  box-shadow: 0 24px 60px rgba(0,0,0,0.6);
-}
-
-section h2 {
-  font-size: 26px;
-  color: var(--accent);
-  margin-bottom: 18px;
-}
-
-section p {
-  max-width: 760px;
-  margin-bottom: 14px;
-  opacity: 0.9;
-}
-
-/* =========================
-   RESUME BUTTONS
-========================= */
-.resume-buttons {
-  display: flex;
-  gap: 18px;
-  margin-top: 22px;
-  flex-wrap: wrap;
-}
-
-/* =========================
-   SKILLS
-========================= */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 28px;
-  margin-top: 24px;
-}
-
-.skill-card {
-  padding: 28px;
-  border-radius: 20px;
-  background: rgba(240,245,255,0.9);
-}
-
-body.dark .skill-card {
-  background: rgba(35,35,50,0.9);
-}
-
-.skill-card h3 {
-  margin-bottom: 16px;
-}
-
-.skill-tags span {
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #4da3ff, #6bb5ff);
-  color: #fff;
-  font-size: 13px;
-  margin: 6px 6px 0 0;
-}
-
-/* =========================
-   PROJECTS
-========================= */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 28px;
-  margin-top: 24px;
-}
-
-.project-card {
-  padding: 28px;
-  border-radius: 20px;
-  background: rgba(240,245,255,0.9);
-  transition: all 0.3s ease;
-}
-
-body.dark .project-card {
-  background: rgba(35,35,50,0.9);
-}
-
-.project-card:hover {
-  transform: translateY(-6px);
-}
-
-/* =========================
-   CONNECT
-========================= */
-.connect {
-  text-align: center;
-}
-
-.connect-text {
-  margin-bottom: 24px;
-}
-
-.connect-links {
-  display: flex;
-  justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 25px;
 }
 
-/* Email pill */
-.email-copy {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 18px;
-  border-radius: 999px;
-  background: #ffffff;
-}
-
-body.dark .email-copy {
-  background: rgba(40,40,60,0.95);
-}
-
-.email-copy span {
-  font-weight: 600;
-}
-
-.email-copy button {
-  padding: 8px 16px;
-  border-radius: 999px;
-  border: none;
-  background: linear-gradient(135deg, #4da3ff, #6bb5ff);
-  color: #fff;
-  font-weight: 600;
+.theme-btn {
+  background: none;
+  border: 2px solid var(--blue);
+  color: inherit;
+  padding: 10px 20px;
+  border-radius: 30px;
   cursor: pointer;
 }
 
-/* LinkedIn */
-.connect-links a {
+/* CARDS */
+.card {
+  max-width: 1100px;
+  margin: 0 auto 60px auto;
+  padding: 30px;
+  border-radius: 22px;
+  backdrop-filter: blur(12px);
+}
+
+body.dark .card {
+  background: var(--card-dark);
+}
+
+body.light .card {
+  background: var(--card-light);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  color: var(--blue);
+  margin-bottom: 15px;
+}
+
+.card p {
+  margin-bottom: 20px;
+}
+
+/* GRIDS */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 25px;
+}
+
+.sub-card, .project {
+  background: rgba(0,0,0,0.25);
+  padding: 25px;
+  border-radius: 18px;
+}
+
+body.light .sub-card,
+body.light .project {
+  background: #f1f5f9;
+}
+
+/* TAGS */
+.tags {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tags span {
+  background: var(--blue);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+/* CONNECT */
+.connect-box {
+  display: flex;
+  gap: 15px;
   align-items: center;
-  gap: 8px;
-  padding: 14px 22px;
-  border-radius: 999px;
+  background: rgba(0,0,0,0.3);
+  padding: 15px 20px;
+  border-radius: 30px;
+  width: fit-content;
+  margin-bottom: 15px;
+}
+
+body.light .connect-box {
+  background: #e5e7eb;
+}
+
+.connect-box button {
+  background: var(--blue);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.linkedin {
+  color: var(--blue);
   text-decoration: none;
   font-weight: 600;
-  color: #fff;
-  background: linear-gradient(135deg, #0a66c2, #3385d6);
 }
 
-.connect-links a:hover {
-  opacity: 0.9;
-}
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 26px;
   opacity: 0.6;
-}
-
-/* =========================
-   MOBILE
-========================= */
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  section {
-    margin: 24px;
-    padding: 26px;
-  }
+  margin-top: 60px;
 }
