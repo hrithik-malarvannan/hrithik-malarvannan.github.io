@@ -1,4 +1,4 @@
-/* ---------- ACCENT COLOR (CHANGE HERE ONLY) ---------- */
+/* ---------- ACCENT COLOR ---------- */
 :root {
   --accent: #007bff;
 }
@@ -16,35 +16,73 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-/* ---------- HEADER ---------- */
-header {
-  background: #ffffff;
-  color: #222;
-  padding: 30px 20px;
+/* ---------- HERO ---------- */
+.hero {
+  padding: 70px 20px;
   text-align: center;
-  border-bottom: 2px solid var(--accent);
-  transition: background 0.3s, color 0.3s;
+  background: white;
+  border-bottom: 3px solid var(--accent);
 }
 
-header h1 {
-  margin: 0;
+.hero h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
 }
 
-header p {
-  margin: 8px 0;
+.hero-tagline {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.hero-text {
+  font-size: 17px;
+  max-width: 750px;
+  margin: 0 auto 30px;
   color: #555;
+  line-height: 1.6;
 }
 
-/* ---------- BUTTON ---------- */
+/* ---------- BUTTONS ---------- */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn.secondary {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ---------- THEME BUTTON ---------- */
 #theme-toggle {
-  margin-top: 15px;
   padding: 8px 18px;
   border-radius: 20px;
   border: 2px solid var(--accent);
   background: white;
   color: var(--accent);
   cursor: pointer;
-  font-size: 14px;
 }
 
 /* ---------- MAIN CONTENT ---------- */
@@ -59,11 +97,14 @@ section {
   padding: 20px;
   border-radius: 8px;
   border-left: 5px solid var(--accent);
-  transition: background 0.3s, color 0.3s;
 }
 
 h2 {
   color: var(--accent);
+}
+
+h4 {
+  margin-bottom: 5px;
 }
 
 ul {
@@ -74,7 +115,7 @@ ul {
 footer {
   text-align: center;
   padding: 12px;
-  background: #ffffff;
+  background: white;
   color: #555;
   border-top: 1px solid #ddd;
 }
@@ -85,19 +126,16 @@ body.dark {
   color: #e0e0e0;
 }
 
-body.dark header {
+body.dark .hero {
   background: #1c1c1c;
-  color: white;
-  border-bottom: 2px solid var(--accent);
 }
 
-body.dark header p {
+body.dark .hero-text {
   color: #ccc;
 }
 
 body.dark section {
   background: #1e1e1e;
-  color: #e0e0e0;
 }
 
 body.dark footer {
@@ -111,24 +149,18 @@ body.dark #theme-toggle {
   border-color: white;
 }
 
-/* ---------- MOBILE RESPONSIVE ---------- */
+/* ---------- MOBILE ---------- */
 @media (max-width: 600px) {
-
-  header {
-    padding: 20px 10px;
+  .hero h1 {
+    font-size: 28px;
   }
 
-  header h1 {
-    font-size: 24px;
+  .hero-text {
+    font-size: 16px;
   }
 
   section {
     margin: 12px;
     padding: 15px;
-  }
-
-  #theme-toggle {
-    font-size: 13px;
-    padding: 6px 14px;
   }
 }
