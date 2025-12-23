@@ -2,104 +2,67 @@
   --accent: #3da9ff;
 }
 
-/* =========================
-   RESET
-========================= */
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* =========================
-   BODY – DEFAULT (DARK MODE)
-========================= */
+/* BODY BACKGROUND (VISIBLE TOP & BOTTOM) */
 body {
   font-family: 'Poppins', sans-serif;
   background:
-    radial-gradient(1200px 600px at 15% 10%, rgba(61,169,255,0.22), transparent 60%),
-    radial-gradient(1200px 600px at 85% 90%, rgba(100,80,255,0.18), transparent 60%),
-    linear-gradient(135deg, #0b0f14, #0f141b, #0b0f14);
-  color: #eaeaea;
+    radial-gradient(800px 500px at 15% 15%, rgba(61,169,255,0.35), transparent 60%),
+    radial-gradient(800px 500px at 85% 85%, rgba(61,169,255,0.25), transparent 60%),
+    linear-gradient(135deg, #0b0d10, #12151b);
+  color: #e6e6e6;
   line-height: 1.75;
-  transition: background 0.4s ease, color 0.3s ease;
-  min-height: 100vh;
 }
 
-/* =========================
-   LIGHT MODE
-========================= */
-body.light {
-  background:
-    radial-gradient(1200px 600px at 15% 10%, rgba(61,169,255,0.25), transparent 60%),
-    radial-gradient(1200px 600px at 85% 90%, rgba(180,200,255,0.35), transparent 60%),
-    linear-gradient(135deg, #f4f6f8, #eef2f6, #f4f6f8);
-  color: #222;
-}
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 .hero {
-  padding: 90px 20px;
   text-align: center;
-  background: rgba(20,20,25,0.75);
-  backdrop-filter: blur(18px);
-  border-radius: 0 0 36px 36px;
-  box-shadow: 0 30px 70px rgba(0,0,0,0.45);
-}
-
-body.light .hero {
-  background: rgba(255,255,255,0.75);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+  padding: 100px 20px;
 }
 
 .hero h1 {
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 18px;
+  font-size: 42px;
+  margin-bottom: 16px;
 }
 
 .hero-tagline {
-  font-size: 19px;
-  font-weight: 600;
   color: var(--accent);
-  margin-bottom: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
 }
 
 .hero-text {
-  max-width: 720px;
-  margin: 0 auto 34px;
-  color: #cfd8e3;
+  max-width: 700px;
+  margin: auto;
+  color: #cfd3da;
 }
 
-body.light .hero-text {
-  color: #555;
-}
-
-/* =========================
-   BUTTONS
-========================= */
+/* BUTTONS */
 .hero-buttons {
+  margin: 32px 0;
   display: flex;
   justify-content: center;
-  gap: 18px;
-  margin-bottom: 30px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 .btn {
-  padding: 12px 28px;
+  padding: 12px 26px;
   border-radius: 999px;
-  text-decoration: none;
   font-weight: 600;
-  font-size: 14px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  transition: transform 0.2s;
 }
 
 .btn.primary {
-  background: linear-gradient(135deg, #3da9ff, #6a8dff);
-  color: #ffffff;
+  background: var(--accent);
+  color: #000;
 }
 
 .btn.secondary {
@@ -109,68 +72,69 @@ body.light .hero-text {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
 }
 
-/* =========================
-   THEME TOGGLE
-========================= */
+/* THEME TOGGLE */
 #theme-toggle {
-  padding: 10px 24px;
+  padding: 10px 22px;
   border-radius: 999px;
-  border: 2px solid var(--accent);
+  border: 2px solid #888;
   background: transparent;
-  color: inherit;
+  color: #fff;
   cursor: pointer;
-  font-weight: 600;
 }
 
-/* =========================
-   MAIN
-========================= */
+/* MAIN */
 main {
-  max-width: 960px;
+  max-width: 1000px;
   margin: auto;
 }
 
-/* =========================
-   SECTIONS
-========================= */
+/* SECTIONS */
 section {
-  background: rgba(25,25,35,0.75);
-  backdrop-filter: blur(18px);
-  margin: 44px 20px;
-  padding: 36px;
+  margin: 60px 20px;
+  padding: 40px;
   border-radius: 22px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
-}
-
-body.light section {
-  background: rgba(255,255,255,0.8);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+  background: rgba(20,20,25,0.75);
 }
 
 section h2 {
-  font-size: 26px;
-  font-weight: 700;
   color: var(--accent);
   margin-bottom: 18px;
 }
 
-section p {
-  margin-bottom: 16px;
-  max-width: 760px;
-  color: #d0d8e2;
+/* SKILLS & PROJECTS */
+.skills-grid,
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 24px;
 }
 
-body.light section p {
-  color: #444;
+.skill-card,
+.project-card {
+  background: rgba(30,30,40,0.85);
+  padding: 26px;
+  border-radius: 18px;
 }
 
-/* =========================
-   CONNECT
-========================= */
+.tags span {
+  display: inline-block;
+  background: var(--accent);
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin: 6px 6px 0 0;
+}
+
+/* CONNECT */
+.connect {
+  text-align: center;
+}
+
 .connect-links {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   gap: 18px;
@@ -181,57 +145,22 @@ body.light section p {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255,255,255,0.08);
-  padding: 12px 18px;
+  background: rgba(255,255,255,0.1);
+  padding: 12px 16px;
   border-radius: 999px;
-}
-
-body.light .email-copy {
-  background: rgba(0,0,0,0.05);
 }
 
 .email-copy button {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
   border: none;
-  background: linear-gradient(135deg, #3da9ff, #6a8dff);
-  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--accent);
   cursor: pointer;
 }
 
-.connect-links a {
-  padding: 12px 20px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 600;
-  color: var(--accent);
-  background: rgba(255,255,255,0.08);
-}
-
-body.light .connect-links a {
-  background: rgba(0,0,0,0.05);
-}
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 26px;
-  opacity: 0.7;
-}
-
-/* =========================
-   MOBILE
-========================= */
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 30px;
-  }
-
-  section {
-    margin: 24px;
-    padding: 26px;
-  }
+  padding: 30px;
+  color: #aaa;
 }
