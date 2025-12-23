@@ -16,7 +16,7 @@
 ========================= */
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f5f5f5;
+  background: #f4f6f8;
   color: #222;
   line-height: 1.75;
   transition: background 0.3s, color 0.3s;
@@ -29,7 +29,6 @@ body {
   padding: 90px 20px;
   text-align: center;
   background: #ffffff;
-  border-bottom: 3px solid var(--accent);
 }
 
 .hero h1 {
@@ -68,7 +67,7 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn.primary {
@@ -83,7 +82,7 @@ body {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
 /* =========================
@@ -103,19 +102,19 @@ body {
    MAIN
 ========================= */
 main {
-  max-width: 920px;
+  max-width: 960px;
   margin: auto;
 }
 
 /* =========================
-   SECTIONS
+   SECTIONS (NO BLUE LINE)
 ========================= */
 section {
   background: #ffffff;
-  margin: 28px 20px;
-  padding: 32px;
-  border-radius: 14px;
-  border-left: 5px solid var(--accent);
+  margin: 32px 20px;
+  padding: 36px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
 section h2 {
@@ -153,9 +152,8 @@ section p {
 
 .skill-card {
   background: #f9f9f9;
-  padding: 24px;
-  border-radius: 16px;
-  border: 1px solid #dddddd;
+  padding: 26px;
+  border-radius: 18px;
 }
 
 .skill-card h3 {
@@ -168,7 +166,7 @@ section p {
   background: #eeeeee;
   color: #333;
   padding: 7px 14px;
-  border-radius: 16px;
+  border-radius: 999px;
   font-size: 13px;
   margin: 4px;
 }
@@ -185,9 +183,8 @@ section p {
 
 .project-card {
   background: #f9f9f9;
-  padding: 24px;
-  border-radius: 16px;
-  border: 1px solid #dddddd;
+  padding: 26px;
+  border-radius: 18px;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
@@ -201,20 +198,20 @@ section p {
 
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.18);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
 }
 
 .tags span {
   background: var(--accent);
   color: #ffffff;
-  padding: 5px 14px;
-  border-radius: 14px;
+  padding: 6px 14px;
+  border-radius: 999px;
   font-size: 12px;
   margin-right: 6px;
 }
 
 /* =========================
-   LET’S CONNECT – MODERN
+   LET’S CONNECT – PILLS
 ========================= */
 .connect {
   text-align: center;
@@ -222,34 +219,29 @@ section p {
 
 .connect-text {
   max-width: 600px;
-  margin: 0 auto 24px;
+  margin: 0 auto 26px;
 }
 
 .connect-links {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 16px;
   flex-wrap: wrap;
 }
 
-/* Email pill */
 .email-copy {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(0, 123, 255, 0.08);
-  padding: 10px 14px;
+  background: rgba(0,123,255,0.08);
+  padding: 12px 16px;
   border-radius: 999px;
-  border: 1.5px solid rgba(0, 123, 255, 0.4);
 }
 
 .email-copy span {
   font-weight: 600;
-  font-size: 14px;
 }
 
-/* Copy button (round) */
 .email-copy button {
   width: 42px;
   height: 42px;
@@ -257,38 +249,31 @@ section p {
   border: none;
   background: var(--accent);
   color: #ffffff;
-  font-weight: 600;
   cursor: pointer;
+  font-weight: 600;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .email-copy button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0, 123, 255, 0.4);
+  box-shadow: 0 6px 14px rgba(0,123,255,0.4);
 }
 
-/* LinkedIn pill */
 .connect-links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 14px;
-  padding: 10px 18px;
-  border-radius: 999px;
-  border: 1.5px solid rgba(0, 123, 255, 0.4);
   color: var(--accent);
-  background: rgba(0, 123, 255, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease,
-              background 0.2s ease;
+  background: rgba(0,123,255,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s;
 }
 
 .connect-links a:hover {
   background: var(--accent);
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0, 123, 255, 0.4);
+  box-shadow: 0 6px 14px rgba(0,123,255,0.4);
 }
 
 /* =========================
@@ -296,55 +281,39 @@ section p {
 ========================= */
 footer {
   text-align: center;
-  padding: 18px;
-  background: #ffffff;
+  padding: 22px;
   color: #666;
-  margin-top: 40px;
 }
 
 /* =========================
    DARK MODE
 ========================= */
 body.dark {
-  background: #121212;
+  background: #0f0f10;
   color: #e0e0e0;
 }
 
 body.dark .hero,
-body.dark section,
-body.dark footer {
-  background: #1e1e1e;
+body.dark section {
+  background: #1a1a1a;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.5);
 }
 
 body.dark section p {
   color: #d6d6d6;
 }
 
-/* Skills dark */
 body.dark .skill-card,
 body.dark .project-card {
-  background: #252525;
-  border-color: #333333;
+  background: #222222;
 }
 
-body.dark .skill-card h3,
-body.dark .project-card h3 {
-  color: #ffffff;
-}
-
-/* Connect dark */
 body.dark .email-copy {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.25);
-}
-
-body.dark .email-copy span {
-  color: #eaeaea;
+  background: rgba(255,255,255,0.06);
 }
 
 body.dark .connect-links a {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255,255,255,0.06);
   color: #ffffff;
 }
 
@@ -368,7 +337,7 @@ body.dark #theme-toggle {
   }
 
   section {
-    margin: 18px;
-    padding: 24px;
+    margin: 20px;
+    padding: 26px;
   }
 }
