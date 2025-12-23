@@ -2,31 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hrithik M | Portfolio</title>
 
-  <!-- Google Font -->
+  <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- AOS animations -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HERO / HEADER -->
-  <header class="hero" data-aos="fade-up">
+  <!-- HERO -->
+  <header class="hero">
     <h1>Hi, I'm Hrithik M</h1>
-
     <p class="hero-tagline">
       ECE Student at VIT Vellore | Aspiring Electronics Engineer
     </p>
-
     <p class="hero-text">
-      Interested in embedded systems, digital design, and real-world hardware projects.<br>
+      Interested in embedded systems, digital design, and real-world hardware projects.
       Currently serving as <strong>Event Head at IETE ISF, VIT Vellore</strong>.
     </p>
 
@@ -35,69 +30,66 @@
       <a href="#connect" class="btn secondary">🔗 Let’s Connect</a>
     </div>
 
-    <!-- THEME TOGGLE -->
     <button id="theme-toggle">🌙 Dark Mode</button>
   </header>
 
   <main>
 
     <!-- RESUME -->
-    <section id="resume" data-aos="fade-up">
+    <section id="resume">
       <h2>Resume</h2>
       <p>You can view or download my resume below.</p>
-
       <div class="resume-buttons">
-        <a href="Hrithik_M_Resume.pdf" target="_blank" class="btn primary">📄 Open Resume</a>
-        <a href="Hrithik_M_Resume.pdf" download class="btn secondary">⬇️ Download Resume</a>
+        <a href="Hrithik_M_Resume.pdf" target="_blank" class="btn primary">Open Resume</a>
+        <a href="Hrithik_M_Resume.pdf" download class="btn secondary">Download Resume</a>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section data-aos="fade-up">
+    <section>
       <h2>About Me</h2>
       <p>
         I am an Electronics and Communication Engineering student at VIT Vellore with a strong
         interest in electronics and embedded systems.
       </p>
       <p>
-        I have participated in multiple hackathons and technical workshops, and currently serve
+        I have participated in multiple hackathons and workshops and currently serve
         as the Event Head of IETE ISF, VIT Vellore.
       </p>
     </section>
 
     <!-- SKILLS -->
-    <section data-aos="fade-up">
+    <section>
       <h2>Skills</h2>
-
       <div class="skills-grid">
         <div class="skill-card">
           <h3>Programming & Tools</h3>
-          <div class="skill-tags">
-            <span>Python (Basic)</span>
-            <span>Java (Basic)</span>
+          <div class="tags">
+            <span>Python</span>
+            <span>Java</span>
             <span>MATLAB</span>
-            <span>Verilog HDL</span>
+            <span>Verilog</span>
           </div>
         </div>
 
         <div class="skill-card">
           <h3>Hardware & Embedded</h3>
-          <div class="skill-tags">
+          <div class="tags">
             <span>ESP32</span>
             <span>Arduino</span>
-            <span>Digital Electronics</span>
-            <span>FPGA (Basic)</span>
+            <span>FPGA</span>
+            <span>Digital Design</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- PROJECTS -->
-    <section data-aos="fade-up">
+    <section>
       <h2>Projects</h2>
-
       <div class="projects-grid">
-        <div class="project-card" data-aos="fade-right">
+
+        <div class="project-card">
           <h3>ESP32-based Prosthetic Arm</h3>
           <p>
             Designed and implemented a prosthetic arm using ESP32 and Arduino,
@@ -110,54 +102,46 @@
           </div>
         </div>
 
-        <div class="project-card" data-aos="fade-left">
-          <h3>FPGA-based Traffic Light Controller</h3>
+        <div class="project-card">
+          <h3>FPGA Traffic Light Controller</h3>
           <p>
-            Implemented a traffic light control system using FPGA and Verilog HDL
-            for digital logic and timing control.
+            Implemented a traffic light controller using FPGA and Verilog HDL
+            for timing and logic control.
           </p>
           <div class="tags">
             <span>FPGA</span>
             <span>Verilog</span>
-            <span>Digital Design</span>
+            <span>Digital</span>
           </div>
         </div>
+
       </div>
     </section>
 
     <!-- CONNECT -->
-    <section id="connect" class="connect" data-aos="fade-up">
+    <section id="connect" class="connect">
       <h2>Let’s Connect</h2>
-      <p class="connect-text">
-        To connect, collaborate, or discuss opportunities, feel free to reach out.
-      </p>
+      <p>To connect, collaborate, or discuss opportunities, feel free to reach out.</p>
 
       <div class="connect-links">
-
-        <!-- EMAIL COPY -->
         <div class="email-copy">
           <span id="email-text">📧 hrithik1413@gmail.com</span>
           <button id="copy-email">Copy</button>
         </div>
 
-        <!-- LINKEDIN BUTTON (FIXED) -->
         <a href="https://www.linkedin.com/in/hrithik-m-795741375"
            target="_blank" rel="noopener">
           🔗 LinkedIn Profile
         </a>
-
       </div>
     </section>
 
   </main>
 
   <footer>
-    <p>© 2025 Hrithik M</p>
+    © 2025 Hrithik M
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="script.js"></script>
-
 </body>
 </html>
