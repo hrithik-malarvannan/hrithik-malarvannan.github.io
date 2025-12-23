@@ -2,132 +2,124 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hrithik M | Portfolio</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-<header class="hero">
-  <h1>Hi, I'm Hrithik M</h1>
-  <p class="hero-tagline">
-    ECE Student at VIT Vellore | Aspiring Electronics Engineer
-  </p>
-  <p class="hero-desc">
-    Interested in embedded systems, digital design, and real-world hardware projects.<br>
-    Currently serving as <strong>Event Head at IETE ISF, VIT Vellore</strong>.
-  </p>
+<body class="dark">
 
-  <div class="hero-actions">
-    <a class="btn primary" href="#resume">View Resume</a>
-    <a class="btn outline" href="#connect">Let’s Connect</a>
-  </div>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Hi, I'm <span>Hrithik M</span></h1>
+    <h2>ECE Student at VIT Vellore | Aspiring Electronics Engineer</h2>
 
-  <button id="theme-toggle">🌙 Dark Mode</button>
-</header>
+    <p>
+      Interested in embedded systems, digital design, and real-world hardware projects.
+      <br/>
+      Currently serving as <strong>Event Head at IETE ISF, VIT Vellore</strong>.
+    </p>
 
-<main>
+    <div class="hero-buttons">
+      <a class="btn primary">View Resume</a>
+      <a class="btn outline">Let’s Connect</a>
+    </div>
 
-<section id="resume">
-  <h2>Resume</h2>
-  <p class="section-text">
-    You can view or download my resume below.
-  </p>
+    <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
+  </section>
 
-  <div class="btn-row">
-    <a class="btn primary" href="Hrithik_M_Resume.pdf" target="_blank">Open Resume</a>
-    <a class="btn outline" href="Hrithik_M_Resume.pdf" download>Download Resume</a>
-  </div>
-</section>
+  <!-- RESUME -->
+  <section class="card">
+    <h3>Resume</h3>
+    <p>You can view or download my resume below.</p>
 
-<section>
-  <h2>Skills</h2>
+    <div class="row">
+      <a class="btn primary">Open Resume</a>
+      <a class="btn outline">Download Resume</a>
+    </div>
+  </section>
 
-  <div class="skills-grid">
-    <div class="skill-card">
-      <h3>Programming & Tools</h3>
-      <div class="tags">
-        <span>Python</span>
-        <span>Java</span>
-        <span>MATLAB</span>
-        <span>Verilog</span>
+  <!-- SKILLS -->
+  <section class="card">
+    <h3>Skills</h3>
+
+    <div class="grid-2">
+      <div class="sub-card">
+        <h4>Programming & Tools</h4>
+        <div class="tags">
+          <span>Python</span>
+          <span>Java</span>
+          <span>MATLAB</span>
+          <span>Verilog</span>
+        </div>
+      </div>
+
+      <div class="sub-card">
+        <h4>Hardware & Embedded</h4>
+        <div class="tags">
+          <span>ESP32</span>
+          <span>Arduino</span>
+          <span>FPGA</span>
+          <span>Digital Design</span>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="skill-card">
-      <h3>Hardware & Embedded</h3>
-      <div class="tags">
-        <span>ESP32</span>
-        <span>Arduino</span>
-        <span>FPGA</span>
-        <span>Digital Design</span>
+  <!-- PROJECTS -->
+  <section class="card">
+    <h3>Projects</h3>
+
+    <div class="grid-2">
+      <div class="project">
+        <h4>ESP32-based Prosthetic Arm</h4>
+        <p>
+          Designed a prosthetic arm using ESP32 and Arduino with servo motor control
+          and EMG-based inputs.
+        </p>
+        <div class="tags">
+          <span>ESP32</span>
+          <span>Arduino</span>
+          <span>Embedded</span>
+        </div>
+      </div>
+
+      <div class="project">
+        <h4>FPGA Traffic Light Controller</h4>
+        <p>
+          Implemented a traffic light controller using Verilog HDL on FPGA
+          with proper timing logic.
+        </p>
+        <div class="tags">
+          <span>FPGA</span>
+          <span>Verilog</span>
+          <span>Digital</span>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section>
-  <h2>Projects</h2>
+  <!-- CONNECT -->
+  <section class="card connect">
+    <h3>Let’s Connect</h3>
+    <p>To connect, collaborate, or discuss opportunities, feel free to reach out.</p>
 
-  <div class="projects-grid">
-    <div class="project-card">
-      <h3>ESP32-based Prosthetic Arm</h3>
-      <p>
-        Designed a prosthetic arm using ESP32 and Arduino with servo motor control
-        and EMG-based inputs.
-      </p>
-      <div class="tags">
-        <span>ESP32</span>
-        <span>Arduino</span>
-        <span>Embedded</span>
-      </div>
+    <div class="connect-box">
+      <span id="email">hrithik1413@gmail.com</span>
+      <button id="copyBtn">Copy</button>
     </div>
 
-    <div class="project-card">
-      <h3>FPGA Traffic Light Controller</h3>
-      <p>
-        Implemented a traffic light controller using Verilog HDL on FPGA with proper
-        timing logic.
-      </p>
-      <div class="tags">
-        <span>FPGA</span>
-        <span>Verilog</span>
-        <span>Digital</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="connect">
-  <h2>Let’s Connect</h2>
-  <p class="section-text">
-    To connect, collaborate, or discuss opportunities, feel free to reach out.
-  </p>
-
-  <div class="connect-row">
-    <div class="email-pill">
-      <span>hrithik1413@gmail.com</span>
-      <button id="copy-email">Copy</button>
-    </div>
-
-    <a class="linkedin-btn"
-       href="https://www.linkedin.com/in/hrithik-m-795741375"
-       target="_blank">
-       LinkedIn Profile
+    <a class="linkedin" href="https://www.linkedin.com/in/hrithik-m-795741375" target="_blank">
+      🔗 LinkedIn Profile
     </a>
-  </div>
-</section>
+  </section>
 
-</main>
+  <footer>© 2025 Hrithik M</footer>
 
-<footer>
-  © 2025 Hrithik M
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
