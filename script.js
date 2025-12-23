@@ -1,44 +1,33 @@
-document.addEventListener("DOMContentLoaded", () => {
+AOS.init({ once: false });
 
-  // AOS
-  if (window.AOS) {
-    AOS.init({ once: false });
-  }
+const toggle = document.getElementById("theme-toggle");
+const body = document.body;
 
-  // Dark mode memory
-  const toggle = document.getElementById("theme-toggle");
-  const saved = localStorage.getItem("theme");
+/* Load saved theme */
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "light") {
+  body.classList.add("light");
+  toggle.textContent = "🌙 Dark Mode";
+} else {
+  toggle.textContent = "☀️ Light Mode";
+}
 
-  if (saved === "light") {
-    document.body.classList.add("light");
-    toggle.textContent = "🌙 Dark Mode";
-  }
+/* Toggle */
+toggle.addEventListener("click", () => {
+  body.classList.toggle("light");
+  const isLight = body.classList.contains("light");
+  localStorage.setItem("theme", isLight ? "light" : "dark");
+  toggle.textContent = isLight ? "🌙 Dark Mode" : "☀️ Light Mode";
+});
 
-  toggle.addEventListener("click", () => {
-    document.body.classList.toggle("light");
-    const isLight = document.body.classList.contains("light");
-    localStorage.setItem("theme", isLight ? "light" : "dark");
-    toggle.textContent = isLight ? "🌙 Dark Mode" : "☀️ Light Mode";
-  });
+/* Copy email */
+document.getElementById("copy-email").onclick = () => {
+  navigator.clipboard.writeText("hrithik1413@gmail.com");
+};
 
-  // Copy email
-  const copyBtn = document.getElementById("copy-email");
-  if (copyBtn) {
-    copyBtn.addEventListener("click", () => {
-      navigator.clipboard.writeText("hrithik1413@gmail.com");
-      copyBtn.textContent = "Copied!";
-      setTimeout(() => (copyBtn.textContent = "Copy"), 1500);
-    });
-  }
-
-  // Cursor gradient glow
-  const glow = document.createElement("div");
-  glow.className = "cursor-glow";
-  document.body.appendChild(glow);
-
-  window.addEventListener("mousemove", (e) => {
-    glow.style.left = e.clientX + "px";
-    glow.style.top = e.clientY + "px";
-  });
-
+/* Cursor glow */
+const glow = document.getElementById("cursor-glow");
+document.addEventListener("mousemove", e => {
+  glow.style.left = `${e.clientX}px`;
+  glow.style.top = `${e.clientY}px`;
 });
