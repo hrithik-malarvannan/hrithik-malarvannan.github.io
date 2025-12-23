@@ -111,6 +111,14 @@ ul {
   padding-left: 20px;
 }
 
+/* ---------- RESUME SECTION ---------- */
+.resume-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
 /* ---------- FOOTER ---------- */
 footer {
   text-align: center;
