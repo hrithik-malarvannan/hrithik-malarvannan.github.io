@@ -4,60 +4,72 @@
 
 /* RESET */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* BODY BACKGROUND (VISIBLE TOP & BOTTOM) */
+/* BODY GRADIENT */
 body {
   font-family: 'Poppins', sans-serif;
+  color: #eaeaea;
   background:
-    radial-gradient(800px 500px at 15% 15%, rgba(61,169,255,0.35), transparent 60%),
-    radial-gradient(800px 500px at 85% 85%, rgba(61,169,255,0.25), transparent 60%),
-    linear-gradient(135deg, #0b0d10, #12151b);
-  color: #e6e6e6;
-  line-height: 1.75;
+    radial-gradient(700px 500px at 10% 10%, rgba(0,140,255,0.35), transparent 60%),
+    radial-gradient(700px 500px at 90% 90%, rgba(120,60,255,0.35), transparent 60%),
+    linear-gradient(135deg, #05070b, #0b0f18);
+  overflow-x: hidden;
+}
+
+/* CURSOR GLOW */
+#cursor-glow {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0,140,255,0.25), transparent 60%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 0;
 }
 
 /* HERO */
 .hero {
   text-align: center;
   padding: 100px 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
   font-size: 42px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .hero-tagline {
   color: var(--accent);
-  font-weight: 600;
-  margin-bottom: 16px;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
 .hero-text {
-  max-width: 700px;
+  max-width: 720px;
   margin: auto;
-  color: #cfd3da;
+  line-height: 1.8;
+  opacity: 0.85;
 }
 
 /* BUTTONS */
 .hero-buttons {
-  margin: 32px 0;
+  margin-top: 32px;
   display: flex;
   justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
+  gap: 18px;
 }
 
 .btn {
-  padding: 12px 26px;
+  padding: 12px 28px;
   border-radius: 999px;
-  font-weight: 600;
   text-decoration: none;
-  transition: transform 0.2s;
+  font-weight: 600;
 }
 
 .btn.primary {
@@ -70,32 +82,28 @@ body {
   color: var(--accent);
 }
 
-.btn:hover {
-  transform: translateY(-2px);
-}
-
 /* THEME TOGGLE */
 #theme-toggle {
+  margin-top: 30px;
   padding: 10px 22px;
   border-radius: 999px;
-  border: 2px solid #888;
   background: transparent;
+  border: 2px solid #aaa;
   color: #fff;
   cursor: pointer;
 }
 
-/* MAIN */
+/* SECTIONS */
 main {
   max-width: 1000px;
   margin: auto;
 }
 
-/* SECTIONS */
 section {
-  margin: 60px 20px;
+  margin: 80px 20px;
   padding: 40px;
+  background: rgba(255,255,255,0.04);
   border-radius: 22px;
-  background: rgba(20,20,25,0.75);
 }
 
 section h2 {
@@ -103,64 +111,78 @@ section h2 {
   margin-bottom: 18px;
 }
 
-/* SKILLS & PROJECTS */
-.skills-grid,
-.projects-grid {
+/* SKILLS */
+.skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
-.skill-card,
-.project-card {
-  background: rgba(30,30,40,0.85);
+.skill-card {
   padding: 26px;
-  border-radius: 18px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 20px;
 }
 
-.tags span {
+.skill-tags span {
   display: inline-block;
+  margin: 6px;
+  padding: 6px 14px;
   background: var(--accent);
   color: #000;
-  padding: 6px 14px;
   border-radius: 999px;
-  font-size: 12px;
-  margin: 6px 6px 0 0;
+  font-size: 13px;
+}
+
+/* PROJECTS */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 30px;
+}
+
+.project-card {
+  padding: 26px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 20px;
 }
 
 /* CONNECT */
-.connect {
-  text-align: center;
-}
-
 .connect-links {
-  margin-top: 20px;
   display: flex;
-  justify-content: center;
-  gap: 18px;
+  gap: 24px;
   flex-wrap: wrap;
+  margin-top: 24px;
 }
 
 .email-copy {
   display: flex;
+  gap: 12px;
   align-items: center;
-  gap: 10px;
-  background: rgba(255,255,255,0.1);
-  padding: 12px 16px;
+  padding: 14px 20px;
   border-radius: 999px;
+  background: rgba(255,255,255,0.08);
 }
 
 .email-copy button {
+  background: var(--accent);
   border: none;
   padding: 8px 16px;
   border-radius: 999px;
-  background: var(--accent);
   cursor: pointer;
+}
+
+.linkedin-btn {
+  padding: 14px 22px;
+  border-radius: 999px;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 30px;
-  color: #aaa;
+  padding: 40px;
+  opacity: 0.7;
 }
