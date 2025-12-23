@@ -4,12 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hrithik M | ECE Student</title>
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- HERO -->
-  <header class="hero reveal">
+  <header class="hero" data-aos="fade-up" data-aos-duration="900">
     <h1>Hi, I'm Hrithik M</h1>
 
     <p class="hero-tagline">
@@ -31,16 +40,24 @@
 
   <main>
 
-    <section id="resume" class="reveal">
+    <!-- RESUME -->
+    <section id="resume"
+             data-aos="fade-up"
+             data-aos-duration="800"
+             data-aos-delay="100">
       <h2>Resume</h2>
       <p>You can view or download my resume below.</p>
+
       <div class="resume-buttons">
         <a href="Hrithik_M_Resume.pdf" target="_blank" class="btn primary">📄 Open Resume</a>
         <a href="Hrithik_M_Resume.pdf" download class="btn secondary">⬇️ Download Resume</a>
       </div>
     </section>
 
-    <section class="reveal">
+    <!-- ABOUT -->
+    <section data-aos="fade-up"
+             data-aos-duration="800"
+             data-aos-delay="150">
       <h2>About Me</h2>
       <p>
         I am an Electronics and Communication Engineering student at VIT Vellore with a strong
@@ -52,8 +69,12 @@
       </p>
     </section>
 
-    <section class="reveal">
+    <!-- SKILLS -->
+    <section data-aos="fade-up"
+             data-aos-duration="800"
+             data-aos-delay="200">
       <h2>Skills</h2>
+
       <h4>Programming & Tools</h4>
       <ul>
         <li>Python (Basic)</li>
@@ -71,14 +92,23 @@
       </ul>
     </section>
 
-    <section class="reveal">
+    <!-- PROJECTS -->
+    <section data-aos="fade-up"
+             data-aos-duration="800"
+             data-aos-delay="250">
       <h2>Projects</h2>
 
       <div class="projects-grid">
-        <div class="project-card reveal">
+
+        <!-- PROJECT 1 -->
+        <div class="project-card"
+             data-aos="fade-right"
+             data-aos-duration="900"
+             data-aos-delay="0">
           <h3>ESP32-based Prosthetic Arm</h3>
           <p>
-            Designed and implemented a prosthetic arm using ESP32 and Arduino.
+            Designed and implemented a prosthetic arm using ESP32 and Arduino,
+            focusing on motor control and embedded system integration.
           </p>
           <div class="tags">
             <span>ESP32</span>
@@ -87,21 +117,31 @@
           </div>
         </div>
 
-        <div class="project-card reveal">
+        <!-- PROJECT 2 -->
+        <div class="project-card"
+             data-aos="fade-left"
+             data-aos-duration="900"
+             data-aos-delay="150">
           <h3>FPGA-based Traffic Light Controller</h3>
           <p>
-            Implemented a traffic control system using FPGA and Verilog HDL.
+            Implemented a traffic light control system using FPGA and Verilog HDL
+            for digital logic and timing control.
           </p>
           <div class="tags">
             <span>FPGA</span>
             <span>Verilog</span>
-            <span>Digital</span>
+            <span>Digital Design</span>
           </div>
         </div>
+
       </div>
     </section>
 
-    <section id="contact" class="reveal">
+    <!-- CONTACT -->
+    <section id="contact"
+             data-aos="fade-up"
+             data-aos-duration="800"
+             data-aos-delay="300">
       <h2>Contact</h2>
       <p>📧 Email: hrithik1413@gmail.com</p>
       <p>🔗 LinkedIn: Hrithik M</p>
@@ -109,9 +149,14 @@
 
   </main>
 
-  <footer class="reveal">
+  <footer data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="350">
     <p>© 2025 Hrithik M</p>
   </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
   <script src="script.js"></script>
 </body>
