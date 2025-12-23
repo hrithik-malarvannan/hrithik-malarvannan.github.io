@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hrithik M | ECE Student</title>
 
-  <!-- Google Font: Poppins -->
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -133,8 +133,13 @@
       </p>
 
       <div class="connect-links">
-        <a href="mailto:hrithik1413@gmail.com">📧 hrithik1413@gmail.com</a>
+        <!-- Email copy -->
+        <div class="email-copy">
+          <span id="email-text">📧 hrithik1413@gmail.com</span>
+          <button id="copy-email">Copy</button>
+        </div>
 
+        <!-- LinkedIn -->
         <a href="https://www.linkedin.com/in/hrithik-m-795741375"
            target="_blank" rel="noopener">
           🔗 LinkedIn Profile
@@ -150,17 +155,7 @@
 
   <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: false });
-  </script>
-
-  <!-- Dark mode toggle -->
-  <script>
-    const toggle = document.getElementById("theme-toggle");
-    toggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark");
-    });
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
