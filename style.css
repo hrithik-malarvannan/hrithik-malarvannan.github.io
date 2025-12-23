@@ -161,12 +161,18 @@ section li {
   margin-top: 15px;
 }
 
+/* 🔥 PROJECT CARD — BASE */
 .project-card {
   background: #f9f9f9;
   padding: 20px;
   border-radius: 12px;
   border: 1px solid #dddddd;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  /* Sync motion with AOS */
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
 .project-card h3 {
@@ -180,9 +186,11 @@ section li {
   line-height: 1.5;
 }
 
+/* 🔥 PROJECT CARD — HOVER (LIGHT MODE) */
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
+  border-color: var(--accent);
 }
 
 /* ================================
@@ -215,7 +223,7 @@ footer {
 }
 
 /* ================================
-   DARK MODE (FIXED)
+   DARK MODE (FIXED + POLISHED)
 ================================ */
 body.dark {
   background: #121212;
@@ -232,7 +240,7 @@ body.dark .hero-text {
   color: #cccccc;
 }
 
-/* 🔥 PROJECT CARD DARK MODE FIX */
+/* 🔥 PROJECT CARD — DARK MODE */
 body.dark .project-card {
   background: #252525;
   border: 1px solid #333333;
@@ -246,9 +254,10 @@ body.dark .project-card p {
   color: #d0d0d0;
 }
 
-body.dark .tags span {
-  background: var(--accent);
-  color: #ffffff;
+/* 🔥 PROJECT CARD — HOVER (DARK MODE) */
+body.dark .project-card:hover {
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.6);
+  border-color: var(--accent);
 }
 
 /* Toggle button in dark mode */
