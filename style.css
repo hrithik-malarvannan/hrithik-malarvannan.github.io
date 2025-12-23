@@ -2,14 +2,18 @@
   --accent: #007bff;
 }
 
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* BODY */
+/* =========================
+   BODY
+========================= */
 body {
   font-family: 'Poppins', sans-serif;
   background: #f5f5f5;
@@ -18,7 +22,9 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 .hero {
   padding: 90px 20px;
   text-align: center;
@@ -47,7 +53,9 @@ body {
   font-size: 16px;
 }
 
-/* BUTTONS */
+/* =========================
+   BUTTONS
+========================= */
 .hero-buttons {
   display: flex;
   justify-content: center;
@@ -68,12 +76,13 @@ body {
 
 .btn.primary {
   background: var(--accent);
-  color: white;
+  color: #ffffff;
 }
 
 .btn.secondary {
   border: 2px solid var(--accent);
   color: var(--accent);
+  background: transparent;
 }
 
 .btn:hover {
@@ -81,26 +90,32 @@ body {
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
-/* TOGGLE */
+/* =========================
+   THEME TOGGLE
+========================= */
 #theme-toggle {
   padding: 9px 22px;
   border-radius: 22px;
   border: 2px solid var(--accent);
-  background: white;
+  background: #ffffff;
   color: var(--accent);
   cursor: pointer;
   font-weight: 600;
 }
 
-/* MAIN */
+/* =========================
+   MAIN
+========================= */
 main {
   max-width: 920px;
   margin: auto;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 section {
-  background: white;
+  background: #ffffff;
   margin: 28px 20px;
   padding: 32px;
   border-radius: 14px;
@@ -120,7 +135,9 @@ section p {
   color: #444;
 }
 
-/* RESUME */
+/* =========================
+   RESUME
+========================= */
 .resume-buttons {
   display: flex;
   gap: 18px;
@@ -128,7 +145,9 @@ section p {
   flex-wrap: wrap;
 }
 
-/* SKILLS */
+/* =========================
+   SKILLS
+========================= */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -146,6 +165,7 @@ section p {
 .skill-card h3 {
   font-size: 18px;
   margin-bottom: 16px;
+  color: #222;
 }
 
 .skill-tags {
@@ -163,7 +183,9 @@ section p {
   font-weight: 500;
 }
 
-/* PROJECTS */
+/* =========================
+   PROJECTS
+========================= */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -182,6 +204,7 @@ section p {
 .project-card h3 {
   font-size: 18px;
   margin-bottom: 12px;
+  color: #222;
 }
 
 .project-card p {
@@ -197,24 +220,28 @@ section p {
 
 .tags span {
   background: var(--accent);
-  color: white;
+  color: #ffffff;
   padding: 5px 14px;
   border-radius: 14px;
   font-size: 12px;
   margin-right: 6px;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 footer {
   text-align: center;
   padding: 18px;
-  background: white;
+  background: #ffffff;
   color: #666;
   margin-top: 40px;
   font-size: 14px;
 }
 
-/* DARK MODE */
+/* =========================
+   DARK MODE (FIXED)
+========================= */
 body.dark {
   background: #121212;
   color: #e0e0e0;
@@ -230,10 +257,19 @@ body.dark .hero-text {
   color: #cccccc;
 }
 
-body.dark .skill-card,
-body.dark .project-card {
+/* 🔥 FIX: paragraph text visibility in dark mode */
+body.dark section p {
+  color: #d6d6d6;
+}
+
+/* SKILLS dark mode */
+body.dark .skill-card {
   background: #252525;
   border-color: #333333;
+}
+
+body.dark .skill-card h3 {
+  color: #ffffff;
 }
 
 body.dark .skill-tags span {
@@ -241,17 +277,26 @@ body.dark .skill-tags span {
   color: #e0e0e0;
 }
 
+/* PROJECTS dark mode */
+body.dark .project-card {
+  background: #252525;
+  border-color: #333333;
+}
+
 body.dark .project-card p {
   color: #d0d0d0;
 }
 
+/* Toggle button dark */
 body.dark #theme-toggle {
   background: transparent;
-  color: white;
-  border-color: white;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 600px) {
   .hero h1 {
     font-size: 30px;
