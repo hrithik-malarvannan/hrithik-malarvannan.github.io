@@ -230,6 +230,41 @@ section p {
 }
 
 /* =========================
+   LET’S CONNECT
+========================= */
+.connect {
+  text-align: center;
+}
+
+.connect-text {
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.connect-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.connect-links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--accent);
+  padding: 10px 18px;
+  border-radius: 22px;
+  border: 2px solid var(--accent);
+  transition: background 0.25s, color 0.25s, transform 0.2s;
+}
+
+.connect-links a:hover {
+  background: var(--accent);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* =========================
    FOOTER
 ========================= */
 footer {
@@ -242,31 +277,28 @@ footer {
 }
 
 /* =========================
-   DARK MODE (FULLY FIXED)
+   DARK MODE (COMPLETE)
 ========================= */
 body.dark {
   background: #121212;
   color: #e0e0e0;
 }
 
-/* Containers */
 body.dark .hero,
 body.dark section,
 body.dark footer {
   background: #1e1e1e;
 }
 
-/* Hero text */
 body.dark .hero-text {
   color: #cccccc;
 }
 
-/* Section paragraphs */
 body.dark section p {
   color: #d6d6d6;
 }
 
-/* Skills cards */
+/* Skills dark */
 body.dark .skill-card {
   background: #252525;
   border-color: #333333;
@@ -281,21 +313,32 @@ body.dark .skill-tags span {
   color: #e0e0e0;
 }
 
-/* Project cards */
+/* Projects dark */
 body.dark .project-card {
   background: #252525;
   border-color: #333333;
 }
 
 body.dark .project-card h3 {
-  color: #ffffff; /* 🔥 FIXED */
+  color: #ffffff;
 }
 
 body.dark .project-card p {
   color: #d0d0d0;
 }
 
-/* Toggle button */
+/* Connect dark */
+body.dark .connect-links a {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+body.dark .connect-links a:hover {
+  background: #ffffff;
+  color: #121212;
+}
+
+/* Toggle dark */
 body.dark #theme-toggle {
   background: transparent;
   color: #ffffff;
