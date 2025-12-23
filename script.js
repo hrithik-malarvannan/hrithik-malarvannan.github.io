@@ -1,31 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.getElementById("theme-toggle");
 
-  if (!toggleBtn) {
-    console.error("Theme toggle button not found");
-    return;
-  }
-
-  // Load saved theme
+  // DARK MODE MEMORY
   const savedTheme = localStorage.getItem("theme");
-
   if (savedTheme === "dark") {
     document.body.classList.add("dark");
     toggleBtn.textContent = "☀️ Light Mode";
-  } else {
-    toggleBtn.textContent = "🌙 Dark Mode";
   }
 
-  // Toggle theme on click
   toggleBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark");
-
-    if (document.body.classList.contains("dark")) {
-      localStorage.setItem("theme", "dark");
-      toggleBtn.textContent = "☀️ Light Mode";
-    } else {
-      localStorage.setItem("theme", "light");
-      toggleBtn.textContent = "🌙 Dark Mode";
-    }
+    const isDark = document.body.classList.contains("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    toggleBtn.textContent = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
   });
+
+  // SCROLL REVEAL ANIMATION
+  const reveals = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  reveals.forEach(el => observer.observe(el));
 });
