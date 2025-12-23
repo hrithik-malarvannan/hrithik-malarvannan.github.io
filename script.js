@@ -16,10 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const copyBtn = document.getElementById("copy-email");
   if (copyBtn) {
-    copyBtn.onclick = () => {
+    copyBtn.addEventListener("click", () => {
       navigator.clipboard.writeText("hrithik1413@gmail.com");
       copyBtn.textContent = "Copied!";
       setTimeout(() => copyBtn.textContent = "Copy", 1500);
-    };
+    });
   }
 });
