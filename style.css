@@ -1,7 +1,9 @@
+/* ---------- ACCENT ---------- */
 :root {
   --accent: #007bff;
 }
 
+/* BASE */
 * {
   box-sizing: border-box;
 }
@@ -24,22 +26,18 @@ body {
 
 .hero h1 {
   font-size: 38px;
-  margin-bottom: 10px;
 }
 
 .hero-tagline {
   font-size: 18px;
   font-weight: bold;
   color: var(--accent);
-  margin-bottom: 15px;
 }
 
 .hero-text {
-  font-size: 17px;
   max-width: 750px;
   margin: 0 auto 30px;
   color: #555;
-  line-height: 1.6;
 }
 
 /* BUTTONS */
@@ -48,7 +46,6 @@ body {
   justify-content: center;
   gap: 15px;
   margin-bottom: 25px;
-  flex-wrap: wrap;
 }
 
 .btn {
@@ -56,7 +53,6 @@ body {
   border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
-  transition: transform 0.2s, background 0.2s;
 }
 
 .btn.primary {
@@ -67,10 +63,6 @@ body {
 .btn.secondary {
   border: 2px solid var(--accent);
   color: var(--accent);
-}
-
-.btn:hover {
-  transform: translateY(-2px);
 }
 
 /* TOGGLE */
@@ -97,17 +89,6 @@ section {
   border-left: 5px solid var(--accent);
 }
 
-h2 {
-  color: var(--accent);
-}
-
-.resume-buttons {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-top: 15px;
-}
-
 /* PROJECTS */
 .projects-grid {
   display: grid;
@@ -119,32 +100,34 @@ h2 {
   background: #f9f9f9;
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid #ddd;
-  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
+/* TAGS */
 .tags span {
-  display: inline-block;
   background: var(--accent);
   color: white;
   padding: 4px 10px;
   border-radius: 15px;
   font-size: 12px;
   margin-right: 6px;
-  margin-top: 8px;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 12px;
-  background: white;
-  color: #555;
+}
+
+/* ---------- ANIMATIONS ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* DARK MODE */
@@ -153,25 +136,14 @@ body.dark {
   color: #e0e0e0;
 }
 
-body.dark .hero,
 body.dark section,
+body.dark .hero,
 body.dark footer {
   background: #1e1e1e;
 }
 
 body.dark .hero-text {
   color: #ccc;
-}
-
-body.dark .project-card {
-  background: #2a2a2a;
-  border-color: #333;
-}
-
-body.dark #theme-toggle {
-  background: transparent;
-  color: white;
-  border-color: white;
 }
 
 /* MOBILE */
