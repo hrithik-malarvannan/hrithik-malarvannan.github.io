@@ -1,237 +1,163 @@
-:root {
-  --accent: #3da9ff;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hrithik M | Portfolio</title>
 
-/* =========================
-   RESET
-========================= */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-/* =========================
-   BODY – DEFAULT (DARK MODE)
-========================= */
-body {
-  font-family: 'Poppins', sans-serif;
-  background:
-    radial-gradient(1200px 600px at 15% 10%, rgba(61,169,255,0.22), transparent 60%),
-    radial-gradient(1200px 600px at 85% 90%, rgba(100,80,255,0.18), transparent 60%),
-    linear-gradient(135deg, #0b0f14, #0f141b, #0b0f14);
-  color: #eaeaea;
-  line-height: 1.75;
-  transition: background 0.4s ease, color 0.3s ease;
-  min-height: 100vh;
-}
+  <!-- AOS animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-/* =========================
-   LIGHT MODE
-========================= */
-body.light {
-  background:
-    radial-gradient(1200px 600px at 15% 10%, rgba(61,169,255,0.25), transparent 60%),
-    radial-gradient(1200px 600px at 85% 90%, rgba(180,200,255,0.35), transparent 60%),
-    linear-gradient(135deg, #f4f6f8, #eef2f6, #f4f6f8);
-  color: #222;
-}
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-/* =========================
-   HERO
-========================= */
-.hero {
-  padding: 90px 20px;
-  text-align: center;
-  background: rgba(20,20,25,0.75);
-  backdrop-filter: blur(18px);
-  border-radius: 0 0 36px 36px;
-  box-shadow: 0 30px 70px rgba(0,0,0,0.45);
-}
+  <!-- HERO / HEADER -->
+  <header class="hero" data-aos="fade-up">
+    <h1>Hi, I'm Hrithik M</h1>
 
-body.light .hero {
-  background: rgba(255,255,255,0.75);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
-}
+    <p class="hero-tagline">
+      ECE Student at VIT Vellore | Aspiring Electronics Engineer
+    </p>
 
-.hero h1 {
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 18px;
-}
+    <p class="hero-text">
+      Interested in embedded systems, digital design, and real-world hardware projects.<br>
+      Currently serving as <strong>Event Head at IETE ISF, VIT Vellore</strong>.
+    </p>
 
-.hero-tagline {
-  font-size: 19px;
-  font-weight: 600;
-  color: var(--accent);
-  margin-bottom: 18px;
-}
+    <div class="hero-buttons">
+      <a href="#resume" class="btn primary">📄 View Resume</a>
+      <a href="#connect" class="btn secondary">🔗 Let’s Connect</a>
+    </div>
 
-.hero-text {
-  max-width: 720px;
-  margin: 0 auto 34px;
-  color: #cfd8e3;
-}
+    <!-- THEME TOGGLE -->
+    <button id="theme-toggle">🌙 Dark Mode</button>
+  </header>
 
-body.light .hero-text {
-  color: #555;
-}
+  <main>
 
-/* =========================
-   BUTTONS
-========================= */
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
-}
+    <!-- RESUME -->
+    <section id="resume" data-aos="fade-up">
+      <h2>Resume</h2>
+      <p>You can view or download my resume below.</p>
 
-.btn {
-  padding: 12px 28px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+      <div class="resume-buttons">
+        <a href="Hrithik_M_Resume.pdf" target="_blank" class="btn primary">📄 Open Resume</a>
+        <a href="Hrithik_M_Resume.pdf" download class="btn secondary">⬇️ Download Resume</a>
+      </div>
+    </section>
 
-.btn.primary {
-  background: linear-gradient(135deg, #3da9ff, #6a8dff);
-  color: #ffffff;
-}
+    <!-- ABOUT -->
+    <section data-aos="fade-up">
+      <h2>About Me</h2>
+      <p>
+        I am an Electronics and Communication Engineering student at VIT Vellore with a strong
+        interest in electronics and embedded systems.
+      </p>
+      <p>
+        I have participated in multiple hackathons and technical workshops, and currently serve
+        as the Event Head of IETE ISF, VIT Vellore.
+      </p>
+    </section>
 
-.btn.secondary {
-  border: 2px solid var(--accent);
-  color: var(--accent);
-}
+    <!-- SKILLS -->
+    <section data-aos="fade-up">
+      <h2>Skills</h2>
 
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
-}
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Programming & Tools</h3>
+          <div class="skill-tags">
+            <span>Python (Basic)</span>
+            <span>Java (Basic)</span>
+            <span>MATLAB</span>
+            <span>Verilog HDL</span>
+          </div>
+        </div>
 
-/* =========================
-   THEME TOGGLE
-========================= */
-#theme-toggle {
-  padding: 10px 24px;
-  border-radius: 999px;
-  border: 2px solid var(--accent);
-  background: transparent;
-  color: inherit;
-  cursor: pointer;
-  font-weight: 600;
-}
+        <div class="skill-card">
+          <h3>Hardware & Embedded</h3>
+          <div class="skill-tags">
+            <span>ESP32</span>
+            <span>Arduino</span>
+            <span>Digital Electronics</span>
+            <span>FPGA (Basic)</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* =========================
-   MAIN
-========================= */
-main {
-  max-width: 960px;
-  margin: auto;
-}
+    <!-- PROJECTS -->
+    <section data-aos="fade-up">
+      <h2>Projects</h2>
 
-/* =========================
-   SECTIONS
-========================= */
-section {
-  background: rgba(25,25,35,0.75);
-  backdrop-filter: blur(18px);
-  margin: 44px 20px;
-  padding: 36px;
-  border-radius: 22px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
-}
+      <div class="projects-grid">
+        <div class="project-card" data-aos="fade-right">
+          <h3>ESP32-based Prosthetic Arm</h3>
+          <p>
+            Designed and implemented a prosthetic arm using ESP32 and Arduino,
+            focusing on motor control and embedded system integration.
+          </p>
+          <div class="tags">
+            <span>ESP32</span>
+            <span>Arduino</span>
+            <span>Embedded</span>
+          </div>
+        </div>
 
-body.light section {
-  background: rgba(255,255,255,0.8);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
-}
+        <div class="project-card" data-aos="fade-left">
+          <h3>FPGA-based Traffic Light Controller</h3>
+          <p>
+            Implemented a traffic light control system using FPGA and Verilog HDL
+            for digital logic and timing control.
+          </p>
+          <div class="tags">
+            <span>FPGA</span>
+            <span>Verilog</span>
+            <span>Digital Design</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-section h2 {
-  font-size: 26px;
-  font-weight: 700;
-  color: var(--accent);
-  margin-bottom: 18px;
-}
+    <!-- CONNECT -->
+    <section id="connect" class="connect" data-aos="fade-up">
+      <h2>Let’s Connect</h2>
+      <p class="connect-text">
+        To connect, collaborate, or discuss opportunities, feel free to reach out.
+      </p>
 
-section p {
-  margin-bottom: 16px;
-  max-width: 760px;
-  color: #d0d8e2;
-}
+      <div class="connect-links">
 
-body.light section p {
-  color: #444;
-}
+        <!-- EMAIL COPY -->
+        <div class="email-copy">
+          <span id="email-text">📧 hrithik1413@gmail.com</span>
+          <button id="copy-email">Copy</button>
+        </div>
 
-/* =========================
-   CONNECT
-========================= */
-.connect-links {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
+        <!-- LINKEDIN BUTTON (FIXED) -->
+        <a href="https://www.linkedin.com/in/hrithik-m-795741375"
+           target="_blank" rel="noopener">
+          🔗 LinkedIn Profile
+        </a>
 
-.email-copy {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(255,255,255,0.08);
-  padding: 12px 18px;
-  border-radius: 999px;
-}
+      </div>
+    </section>
 
-body.light .email-copy {
-  background: rgba(0,0,0,0.05);
-}
+  </main>
 
-.email-copy button {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  border: none;
-  background: linear-gradient(135deg, #3da9ff, #6a8dff);
-  color: #ffffff;
-  cursor: pointer;
-}
+  <footer>
+    <p>© 2025 Hrithik M</p>
+  </footer>
 
-.connect-links a {
-  padding: 12px 20px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 600;
-  color: var(--accent);
-  background: rgba(255,255,255,0.08);
-}
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
 
-body.light .connect-links a {
-  background: rgba(0,0,0,0.05);
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-  text-align: center;
-  padding: 26px;
-  opacity: 0.7;
-}
-
-/* =========================
-   MOBILE
-========================= */
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 30px;
-  }
-
-  section {
-    margin: 24px;
-    padding: 26px;
-  }
-}
+</body>
+</html>
