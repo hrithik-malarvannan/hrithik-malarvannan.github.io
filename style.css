@@ -198,7 +198,9 @@ section p {
   padding: 24px;
   border-radius: 16px;
   border: 1px solid #dddddd;
-  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  transition: transform 0.35s ease,
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
 }
 
 .project-card h3 {
@@ -240,29 +242,31 @@ footer {
 }
 
 /* =========================
-   DARK MODE (FIXED)
+   DARK MODE (FULLY FIXED)
 ========================= */
 body.dark {
   background: #121212;
   color: #e0e0e0;
 }
 
+/* Containers */
 body.dark .hero,
 body.dark section,
 body.dark footer {
   background: #1e1e1e;
 }
 
+/* Hero text */
 body.dark .hero-text {
   color: #cccccc;
 }
 
-/* 🔥 FIX: paragraph text visibility in dark mode */
+/* Section paragraphs */
 body.dark section p {
   color: #d6d6d6;
 }
 
-/* SKILLS dark mode */
+/* Skills cards */
 body.dark .skill-card {
   background: #252525;
   border-color: #333333;
@@ -277,17 +281,21 @@ body.dark .skill-tags span {
   color: #e0e0e0;
 }
 
-/* PROJECTS dark mode */
+/* Project cards */
 body.dark .project-card {
   background: #252525;
   border-color: #333333;
+}
+
+body.dark .project-card h3 {
+  color: #ffffff; /* 🔥 FIXED */
 }
 
 body.dark .project-card p {
   color: #d0d0d0;
 }
 
-/* Toggle button dark */
+/* Toggle button */
 body.dark #theme-toggle {
   background: transparent;
   color: #ffffff;
