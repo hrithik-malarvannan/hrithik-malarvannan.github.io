@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hrithik M | ECE Student</title>
 
-  <!-- GOOGLE FONT -->
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- AOS CSS -->
+  <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
@@ -41,10 +41,7 @@
   <main>
 
     <!-- RESUME -->
-    <section id="resume"
-             data-aos="fade-up"
-             data-aos-duration="800"
-             data-aos-delay="100">
+    <section id="resume" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
       <h2>Resume</h2>
       <p>You can view or download my resume below.</p>
 
@@ -55,9 +52,7 @@
     </section>
 
     <!-- ABOUT -->
-    <section data-aos="fade-up"
-             data-aos-duration="800"
-             data-aos-delay="150">
+    <section data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
       <h2>About Me</h2>
       <p>
         I am an Electronics and Communication Engineering student at VIT Vellore with a strong
@@ -70,41 +65,43 @@
     </section>
 
     <!-- SKILLS -->
-    <section data-aos="fade-up"
-             data-aos-duration="800"
-             data-aos-delay="200">
+    <section data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
       <h2>Skills</h2>
 
-      <h4>Programming & Tools</h4>
-      <ul>
-        <li>Python (Basic)</li>
-        <li>Java (Basic)</li>
-        <li>MATLAB</li>
-        <li>Verilog HDL</li>
-      </ul>
+      <div class="skills-grid">
 
-      <h4>Hardware & Embedded</h4>
-      <ul>
-        <li>ESP32</li>
-        <li>Arduino</li>
-        <li>Digital Electronics</li>
-        <li>FPGA (Basic)</li>
-      </ul>
+        <div class="skill-card">
+          <h3>Programming & Tools</h3>
+          <div class="skill-tags">
+            <span>Python (Basic)</span>
+            <span>Java (Basic)</span>
+            <span>MATLAB</span>
+            <span>Verilog HDL</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Hardware & Embedded</h3>
+          <div class="skill-tags">
+            <span>ESP32</span>
+            <span>Arduino</span>
+            <span>Digital Electronics</span>
+            <span>FPGA (Basic)</span>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <!-- PROJECTS -->
-    <section data-aos="fade-up"
-             data-aos-duration="800"
-             data-aos-delay="250">
+    <section data-aos="fade-up" data-aos-duration="800" data-aos-delay="250">
       <h2>Projects</h2>
 
       <div class="projects-grid">
 
-        <!-- PROJECT 1 -->
         <div class="project-card"
              data-aos="fade-right"
-             data-aos-duration="900"
-             data-aos-delay="0">
+             data-aos-duration="900">
           <h3>ESP32-based Prosthetic Arm</h3>
           <p>
             Designed and implemented a prosthetic arm using ESP32 and Arduino,
@@ -117,7 +114,6 @@
           </div>
         </div>
 
-        <!-- PROJECT 2 -->
         <div class="project-card"
              data-aos="fade-left"
              data-aos-duration="900"
@@ -138,10 +134,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact"
-             data-aos="fade-up"
-             data-aos-duration="800"
-             data-aos-delay="300">
+    <section id="contact" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
       <h2>Contact</h2>
       <p>📧 Email: hrithik1413@gmail.com</p>
       <p>🔗 LinkedIn: Hrithik M</p>
@@ -149,15 +142,12 @@
 
   </main>
 
-  <footer data-aos="fade-up"
-          data-aos-duration="800"
-          data-aos-delay="350">
+  <footer data-aos="fade-up" data-aos-duration="800" data-aos-delay="350">
     <p>© 2025 Hrithik M</p>
   </footer>
 
-  <!-- AOS JS -->
+  <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
   <script src="script.js"></script>
 </body>
 </html>
