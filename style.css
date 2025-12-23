@@ -12,23 +12,27 @@
 }
 
 /* =========================
-   BODY
+   BODY – BACKGROUND DEPTH
 ========================= */
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f4f6f8;
+  background:
+    radial-gradient(1200px 400px at top center, rgba(0,123,255,0.08), transparent 60%),
+    linear-gradient(#f4f6f8, #eef1f4);
   color: #222;
   line-height: 1.75;
   transition: background 0.3s, color 0.3s;
 }
 
 /* =========================
-   HERO
+   HERO – FLOATING FEEL
 ========================= */
 .hero {
   padding: 90px 20px;
   text-align: center;
   background: #ffffff;
+  border-radius: 0 0 32px 32px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
 }
 
 .hero h1 {
@@ -82,7 +86,7 @@ body {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
 /* =========================
@@ -107,14 +111,14 @@ main {
 }
 
 /* =========================
-   SECTIONS (NO BLUE LINE)
+   SECTIONS – FLOATING CARDS
 ========================= */
 section {
   background: #ffffff;
-  margin: 32px 20px;
+  margin: 40px 20px;
   padding: 36px;
-  border-radius: 18px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
 }
 
 section h2 {
@@ -157,7 +161,6 @@ section p {
 }
 
 .skill-card h3 {
-  font-size: 18px;
   margin-bottom: 16px;
 }
 
@@ -188,17 +191,9 @@ section p {
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.project-card h3 {
-  margin-bottom: 12px;
-}
-
-.project-card p {
-  color: #555;
-}
-
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  box-shadow: 0 22px 50px rgba(0,0,0,0.18);
 }
 
 .tags span {
@@ -211,15 +206,10 @@ section p {
 }
 
 /* =========================
-   LET’S CONNECT – PILLS
+   CONNECT PILLS
 ========================= */
 .connect {
   text-align: center;
-}
-
-.connect-text {
-  max-width: 600px;
-  margin: 0 auto 26px;
 }
 
 .connect-links {
@@ -238,10 +228,6 @@ section p {
   border-radius: 999px;
 }
 
-.email-copy span {
-  font-weight: 600;
-}
-
 .email-copy button {
   width: 42px;
   height: 42px;
@@ -250,30 +236,6 @@ section p {
   background: var(--accent);
   color: #ffffff;
   cursor: pointer;
-  font-weight: 600;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.email-copy button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0,123,255,0.4);
-}
-
-.connect-links a {
-  padding: 12px 20px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 600;
-  color: var(--accent);
-  background: rgba(0,123,255,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s;
-}
-
-.connect-links a:hover {
-  background: var(--accent);
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0,123,255,0.4);
 }
 
 /* =========================
@@ -286,17 +248,19 @@ footer {
 }
 
 /* =========================
-   DARK MODE
+   DARK MODE – DEPTH
 ========================= */
 body.dark {
-  background: #0f0f10;
+  background:
+    radial-gradient(1200px 400px at top center, rgba(0,123,255,0.12), transparent 60%),
+    linear-gradient(#0f0f10, #121214);
   color: #e0e0e0;
 }
 
 body.dark .hero,
 body.dark section {
   background: #1a1a1a;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.6);
 }
 
 body.dark section p {
@@ -310,16 +274,6 @@ body.dark .project-card {
 
 body.dark .email-copy {
   background: rgba(255,255,255,0.06);
-}
-
-body.dark .connect-links a {
-  background: rgba(255,255,255,0.06);
-  color: #ffffff;
-}
-
-body.dark .connect-links a:hover {
-  background: #ffffff;
-  color: #121212;
 }
 
 body.dark #theme-toggle {
@@ -337,7 +291,7 @@ body.dark #theme-toggle {
   }
 
   section {
-    margin: 20px;
+    margin: 24px;
     padding: 26px;
   }
 }
