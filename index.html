@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hrithik M | Portfolio</title>
 
-  <!-- Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
@@ -16,19 +14,17 @@
 
 <header class="hero">
   <h1>Hi, I'm Hrithik M</h1>
-
   <p class="hero-tagline">
     ECE Student at VIT Vellore | Aspiring Electronics Engineer
   </p>
-
-  <p class="hero-text">
+  <p class="hero-desc">
     Interested in embedded systems, digital design, and real-world hardware projects.<br>
     Currently serving as <strong>Event Head at IETE ISF, VIT Vellore</strong>.
   </p>
 
-  <div class="hero-buttons">
-    <a href="#resume" class="btn primary">📄 View Resume</a>
-    <a href="#connect" class="btn secondary">🔗 Let’s Connect</a>
+  <div class="hero-actions">
+    <a class="btn primary" href="#resume">View Resume</a>
+    <a class="btn outline" href="#connect">Let’s Connect</a>
   </div>
 
   <button id="theme-toggle">🌙 Dark Mode</button>
@@ -36,105 +32,95 @@
 
 <main>
 
-  <!-- RESUME -->
-  <section id="resume">
-    <h2>Resume</h2>
-    <p>You can view or download my resume below.</p>
+<section id="resume">
+  <h2>Resume</h2>
+  <p class="section-text">
+    You can view or download my resume below.
+  </p>
 
-    <div class="resume-buttons">
-      <a href="#" class="btn primary">Open Resume</a>
-      <a href="#" class="btn secondary">Download Resume</a>
-    </div>
-  </section>
+  <div class="btn-row">
+    <a class="btn primary" href="Hrithik_M_Resume.pdf" target="_blank">Open Resume</a>
+    <a class="btn outline" href="Hrithik_M_Resume.pdf" download>Download Resume</a>
+  </div>
+</section>
 
-  <!-- ABOUT -->
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I am an Electronics and Communication Engineering student at VIT Vellore with a strong
-      interest in electronics and embedded systems.
-    </p>
-    <p>
-      I have participated in multiple hackathons and technical workshops, and currently serve
-      as the Event Head of IETE ISF, VIT Vellore.
-    </p>
-  </section>
+<section>
+  <h2>Skills</h2>
 
-  <!-- SKILLS -->
-  <section>
-    <h2>Skills</h2>
-
-    <div class="skills-grid">
-      <div class="skill-card">
-        <h3>Programming & Tools</h3>
-        <div class="tags">
-          <span>Python</span>
-          <span>Java</span>
-          <span>MATLAB</span>
-          <span>Verilog</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <h3>Hardware & Embedded</h3>
-        <div class="tags">
-          <span>ESP32</span>
-          <span>Arduino</span>
-          <span>FPGA</span>
-          <span>Digital Design</span>
-        </div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h3>Programming & Tools</h3>
+      <div class="tags">
+        <span>Python</span>
+        <span>Java</span>
+        <span>MATLAB</span>
+        <span>Verilog</span>
       </div>
     </div>
-  </section>
 
-  <!-- PROJECTS -->
-  <section>
-    <h2>Projects</h2>
-
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>ESP32-based Prosthetic Arm</h3>
-        <p>
-          Designed and implemented a prosthetic arm using ESP32 and Arduino,
-          focusing on motor control and embedded integration.
-        </p>
-        <div class="tags">
-          <span>ESP32</span>
-          <span>Arduino</span>
-          <span>Embedded</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3>FPGA Traffic Light Controller</h3>
-        <p>
-          Implemented a traffic light control system using FPGA and Verilog HDL.
-        </p>
-        <div class="tags">
-          <span>FPGA</span>
-          <span>Verilog</span>
-          <span>Digital</span>
-        </div>
+    <div class="skill-card">
+      <h3>Hardware & Embedded</h3>
+      <div class="tags">
+        <span>ESP32</span>
+        <span>Arduino</span>
+        <span>FPGA</span>
+        <span>Digital Design</span>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONNECT -->
-  <section id="connect" class="connect">
-    <h2>Let’s Connect</h2>
-    <p>To connect, collaborate, or discuss opportunities, feel free to reach out.</p>
+<section>
+  <h2>Projects</h2>
 
-    <div class="connect-links">
-      <div class="email-copy">
-        <span>📧 hrithik1413@gmail.com</span>
-        <button id="copy-email">Copy</button>
+  <div class="projects-grid">
+    <div class="project-card">
+      <h3>ESP32-based Prosthetic Arm</h3>
+      <p>
+        Designed a prosthetic arm using ESP32 and Arduino with servo motor control
+        and EMG-based inputs.
+      </p>
+      <div class="tags">
+        <span>ESP32</span>
+        <span>Arduino</span>
+        <span>Embedded</span>
       </div>
-
-      <a href="https://www.linkedin.com/in/hrithik-m-795741375" target="_blank">
-        🔗 LinkedIn Profile
-      </a>
     </div>
-  </section>
+
+    <div class="project-card">
+      <h3>FPGA Traffic Light Controller</h3>
+      <p>
+        Implemented a traffic light controller using Verilog HDL on FPGA with proper
+        timing logic.
+      </p>
+      <div class="tags">
+        <span>FPGA</span>
+        <span>Verilog</span>
+        <span>Digital</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="connect">
+  <h2>Let’s Connect</h2>
+  <p class="section-text">
+    To connect, collaborate, or discuss opportunities, feel free to reach out.
+  </p>
+
+  <div class="connect-row">
+    <div class="email-pill">
+      <span>hrithik1413@gmail.com</span>
+      <button id="copy-email">Copy</button>
+    </div>
+
+    <a class="linkedin-btn"
+       href="https://www.linkedin.com/in/hrithik-m-795741375"
+       target="_blank">
+       LinkedIn Profile
+    </a>
+  </div>
+</section>
 
 </main>
 
