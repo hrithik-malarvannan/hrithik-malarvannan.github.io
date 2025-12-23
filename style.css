@@ -2,18 +2,14 @@
   --accent: #007bff;
 }
 
-/* =========================
-   RESET
-========================= */
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* =========================
-   BODY
-========================= */
+/* BODY */
 body {
   font-family: 'Poppins', sans-serif;
   background: #f5f5f5;
@@ -22,9 +18,7 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 .hero {
   padding: 90px 20px;
   text-align: center;
@@ -34,8 +28,6 @@ body {
 
 .hero h1 {
   font-size: 40px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
   margin-bottom: 18px;
 }
 
@@ -50,12 +42,9 @@ body {
   max-width: 720px;
   margin: 0 auto 34px;
   color: #555;
-  font-size: 16px;
 }
 
-/* =========================
-   BUTTONS
-========================= */
+/* BUTTONS */
 .hero-buttons {
   display: flex;
   justify-content: center;
@@ -69,20 +58,17 @@ body {
   border-radius: 26px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.3px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .btn.primary {
   background: var(--accent);
-  color: #ffffff;
+  color: white;
 }
 
 .btn.secondary {
   border: 2px solid var(--accent);
   color: var(--accent);
-  background: transparent;
 }
 
 .btn:hover {
@@ -90,32 +76,25 @@ body {
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
-/* =========================
-   THEME TOGGLE
-========================= */
+/* TOGGLE */
 #theme-toggle {
   padding: 9px 22px;
   border-radius: 22px;
   border: 2px solid var(--accent);
-  background: #ffffff;
+  background: white;
   color: var(--accent);
   cursor: pointer;
-  font-weight: 600;
 }
 
-/* =========================
-   MAIN
-========================= */
+/* MAIN */
 main {
   max-width: 920px;
   margin: auto;
 }
 
-/* =========================
-   SECTIONS
-========================= */
+/* SECTIONS */
 section {
-  background: #ffffff;
+  background: white;
   margin: 28px 20px;
   padding: 32px;
   border-radius: 14px;
@@ -123,21 +102,16 @@ section {
 }
 
 section h2 {
-  font-size: 26px;
-  font-weight: 700;
   color: var(--accent);
   margin-bottom: 18px;
 }
 
 section p {
-  max-width: 760px;
   margin-bottom: 16px;
   color: #444;
 }
 
-/* =========================
-   RESUME
-========================= */
+/* RESUME */
 .resume-buttons {
   display: flex;
   gap: 18px;
@@ -145,100 +119,36 @@ section p {
   flex-wrap: wrap;
 }
 
-/* =========================
-   SKILLS
-========================= */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 26px;
-  margin-top: 20px;
-}
-
-.skill-card {
-  background: #f9f9f9;
-  padding: 24px;
-  border-radius: 16px;
-  border: 1px solid #dddddd;
-}
-
-.skill-card h3 {
-  font-size: 18px;
-  margin-bottom: 16px;
-  color: #222;
-}
-
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.skill-tags span {
-  background: #eeeeee;
-  color: #333;
-  padding: 7px 14px;
-  border-radius: 16px;
-  font-size: 13px;
-  font-weight: 500;
-}
-
-/* =========================
-   PROJECTS
-========================= */
+/* SKILLS */
+.skills-grid,
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 26px;
-  margin-top: 20px;
 }
 
+.skill-card,
 .project-card {
   background: #f9f9f9;
   padding: 24px;
   border-radius: 16px;
   border: 1px solid #dddddd;
-  transition: transform 0.35s ease,
-              box-shadow 0.35s ease,
-              border-color 0.35s ease;
 }
 
-.project-card h3 {
-  font-size: 18px;
-  margin-bottom: 12px;
-  color: #222;
-}
-
-.project-card p {
-  font-size: 15px;
-  color: #555;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.18);
-  border-color: var(--accent);
-}
-
+.skill-tags span,
 .tags span {
+  display: inline-block;
+  margin: 4px;
   background: var(--accent);
-  color: #ffffff;
-  padding: 5px 14px;
+  color: white;
+  padding: 6px 12px;
   border-radius: 14px;
   font-size: 12px;
-  margin-right: 6px;
 }
 
-/* =========================
-   LET’S CONNECT
-========================= */
+/* CONNECT */
 .connect {
   text-align: center;
-}
-
-.connect-text {
-  max-width: 600px;
-  margin: 0 auto 20px;
 }
 
 .connect-links {
@@ -248,37 +158,30 @@ section p {
   flex-wrap: wrap;
 }
 
-.connect-links a {
-  text-decoration: none;
-  font-weight: 600;
-  color: var(--accent);
-  padding: 10px 18px;
-  border-radius: 22px;
+.email-copy {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.email-copy button {
+  padding: 8px 14px;
+  border-radius: 18px;
   border: 2px solid var(--accent);
-  transition: background 0.25s, color 0.25s, transform 0.2s;
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
 }
 
-.connect-links a:hover {
-  background: var(--accent);
-  color: #ffffff;
-  transform: translateY(-2px);
-}
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 footer {
   text-align: center;
   padding: 18px;
-  background: #ffffff;
+  background: white;
   color: #666;
-  margin-top: 40px;
-  font-size: 14px;
 }
 
-/* =========================
-   DARK MODE (COMPLETE)
-========================= */
+/* DARK MODE */
 body.dark {
   background: #121212;
   color: #e0e0e0;
@@ -286,75 +189,25 @@ body.dark {
 
 body.dark .hero,
 body.dark section,
-body.dark footer {
+body.dark footer,
+body.dark .skill-card,
+body.dark .project-card {
   background: #1e1e1e;
-}
-
-body.dark .hero-text {
-  color: #cccccc;
+  border-color: #333;
 }
 
 body.dark section p {
   color: #d6d6d6;
 }
 
-/* Skills dark */
-body.dark .skill-card {
-  background: #252525;
-  border-color: #333333;
+body.dark .email-copy button {
+  border-color: white;
+  color: white;
 }
 
-body.dark .skill-card h3 {
-  color: #ffffff;
-}
-
-body.dark .skill-tags span {
-  background: #333333;
-  color: #e0e0e0;
-}
-
-/* Projects dark */
-body.dark .project-card {
-  background: #252525;
-  border-color: #333333;
-}
-
-body.dark .project-card h3 {
-  color: #ffffff;
-}
-
-body.dark .project-card p {
-  color: #d0d0d0;
-}
-
-/* Connect dark */
-body.dark .connect-links a {
-  color: #ffffff;
-  border-color: #ffffff;
-}
-
-body.dark .connect-links a:hover {
-  background: #ffffff;
-  color: #121212;
-}
-
-/* Toggle dark */
-body.dark #theme-toggle {
-  background: transparent;
-  color: #ffffff;
-  border-color: #ffffff;
-}
-
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 @media (max-width: 600px) {
   .hero h1 {
     font-size: 30px;
-  }
-
-  section {
-    margin: 18px;
-    padding: 24px;
   }
 }
