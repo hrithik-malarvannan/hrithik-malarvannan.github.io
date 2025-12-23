@@ -1,33 +1,32 @@
-AOS.init({ once: false });
+document.addEventListener("DOMContentLoaded", () => {
 
-const toggle = document.getElementById("theme-toggle");
-const body = document.body;
+  // ===== THEME TOGGLE WITH MEMORY =====
+  const toggleBtn = document.getElementById("theme-toggle");
 
-/* Load saved theme */
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme === "light") {
-  body.classList.add("light");
-  toggle.textContent = "🌙 Dark Mode";
-} else {
-  toggle.textContent = "☀️ Light Mode";
-}
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "light") {
+    document.body.classList.add("light");
+    toggleBtn.textContent = "🌙 Dark Mode";
+  } else {
+    toggleBtn.textContent = "🌞 Light Mode";
+  }
 
-/* Toggle */
-toggle.addEventListener("click", () => {
-  body.classList.toggle("light");
-  const isLight = body.classList.contains("light");
-  localStorage.setItem("theme", isLight ? "light" : "dark");
-  toggle.textContent = isLight ? "🌙 Dark Mode" : "☀️ Light Mode";
-});
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light");
+    const isLight = document.body.classList.contains("light");
 
-/* Copy email */
-document.getElementById("copy-email").onclick = () => {
-  navigator.clipboard.writeText("hrithik1413@gmail.com");
-};
+    localStorage.setItem("theme", isLight ? "light" : "dark");
+    toggleBtn.textContent = isLight ? "🌙 Dark Mode" : "🌞 Light Mode";
+  });
 
-/* Cursor glow */
-const glow = document.getElementById("cursor-glow");
-document.addEventListener("mousemove", e => {
-  glow.style.left = `${e.clientX}px`;
-  glow.style.top = `${e.clientY}px`;
+  // ===== COPY EMAIL =====
+  const copyBtn = document.getElementById("copy-email");
+  if (copyBtn) {
+    copyBtn.addEventListener("click", () => {
+      navigator.clipboard.writeText("hrithik1413@gmail.com");
+      copyBtn.textContent = "Copied!";
+      setTimeout(() => copyBtn.textContent = "Copy", 1500);
+    });
+  }
+
 });
