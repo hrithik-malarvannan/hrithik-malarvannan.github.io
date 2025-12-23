@@ -1,31 +1,29 @@
 :root {
   --accent: #3da9ff;
-  --bg-dark: #0b0e13;
-  --bg-light: #f4f6f8;
 }
 
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  min-height: 100vh;
-  transition: background 0.4s, color 0.3s;
-}
-
 /* =========================
-   DARK MODE (DEFAULT)
+   BODY – DEFAULT (DARK MODE)
 ========================= */
 body {
+  font-family: 'Poppins', sans-serif;
   background:
-    radial-gradient(900px 500px at 10% 10%, rgba(61,169,255,0.35), transparent 60%),
-    radial-gradient(900px 500px at 90% 90%, rgba(120,80,255,0.35), transparent 60%),
-    linear-gradient(180deg, #0b0e13, #11151d);
+    radial-gradient(1200px 600px at 15% 10%, rgba(61,169,255,0.22), transparent 60%),
+    radial-gradient(1200px 600px at 85% 90%, rgba(100,80,255,0.18), transparent 60%),
+    linear-gradient(135deg, #0b0f14, #0f141b, #0b0f14);
   color: #eaeaea;
+  line-height: 1.75;
+  transition: background 0.4s ease, color 0.3s ease;
+  min-height: 100vh;
 }
 
 /* =========================
@@ -33,44 +31,75 @@ body {
 ========================= */
 body.light {
   background:
-    radial-gradient(900px 500px at 15% 10%, rgba(61,169,255,0.25), transparent 60%),
-    radial-gradient(900px 500px at 85% 90%, rgba(150,170,255,0.25), transparent 60%),
-    linear-gradient(180deg, #f4f6f8, #e9edf2);
-  color: #1c1c1c;
+    radial-gradient(1200px 600px at 15% 10%, rgba(61,169,255,0.25), transparent 60%),
+    radial-gradient(1200px 600px at 85% 90%, rgba(180,200,255,0.35), transparent 60%),
+    linear-gradient(135deg, #f4f6f8, #eef2f6, #f4f6f8);
+  color: #222;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 .hero {
   padding: 90px 20px;
   text-align: center;
+  background: rgba(20,20,25,0.75);
+  backdrop-filter: blur(18px);
+  border-radius: 0 0 36px 36px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.45);
+}
+
+body.light .hero {
+  background: rgba(255,255,255,0.75);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 18px;
 }
 
 .hero-tagline {
-  color: var(--accent);
+  font-size: 19px;
   font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 18px;
 }
 
 .hero-text {
   max-width: 720px;
-  margin: 18px auto 30px;
-  opacity: 0.85;
+  margin: 0 auto 34px;
+  color: #cfd8e3;
 }
 
-/* BUTTONS */
+body.light .hero-text {
+  color: #555;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
 .btn {
-  padding: 12px 26px;
+  padding: 12px 28px;
   border-radius: 999px;
-  font-weight: 600;
   text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn.primary {
   background: linear-gradient(135deg, #3da9ff, #6a8dff);
-  color: white;
+  color: #ffffff;
 }
 
 .btn.secondary {
@@ -78,38 +107,72 @@ body.light {
   color: var(--accent);
 }
 
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+}
+
+/* =========================
+   THEME TOGGLE
+========================= */
 #theme-toggle {
-  margin-top: 24px;
-  padding: 10px 22px;
+  padding: 10px 24px;
   border-radius: 999px;
   border: 2px solid var(--accent);
   background: transparent;
   color: inherit;
   cursor: pointer;
+  font-weight: 600;
 }
 
-/* SECTIONS */
+/* =========================
+   MAIN
+========================= */
+main {
+  max-width: 960px;
+  margin: auto;
+}
+
+/* =========================
+   SECTIONS
+========================= */
 section {
-  max-width: 900px;
-  margin: 50px auto;
+  background: rgba(25,25,35,0.75);
+  backdrop-filter: blur(18px);
+  margin: 44px 20px;
   padding: 36px;
-  border-radius: 24px;
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(16px);
+  border-radius: 22px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
 }
 
 body.light section {
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
 }
 
-h2 {
+section h2 {
+  font-size: 26px;
+  font-weight: 700;
   color: var(--accent);
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
-/* CONNECT */
+section p {
+  margin-bottom: 16px;
+  max-width: 760px;
+  color: #d0d8e2;
+}
+
+body.light section p {
+  color: #444;
+}
+
+/* =========================
+   CONNECT
+========================= */
 .connect-links {
   display: flex;
+  justify-content: center;
   gap: 18px;
   flex-wrap: wrap;
 }
@@ -117,10 +180,10 @@ h2 {
 .email-copy {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  background: rgba(255,255,255,0.08);
   padding: 12px 18px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.12);
 }
 
 body.light .email-copy {
@@ -128,44 +191,47 @@ body.light .email-copy {
 }
 
 .email-copy button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
   border: none;
-  border-radius: 999px;
-  padding: 8px 14px;
-  background: var(--accent);
-  color: white;
+  background: linear-gradient(135deg, #3da9ff, #6a8dff);
+  color: #ffffff;
   cursor: pointer;
 }
 
-.linkedin-pill {
-  padding: 12px 18px;
+.connect-links a {
+  padding: 12px 20px;
   border-radius: 999px;
-  border: 2px solid var(--accent);
-  color: var(--accent);
   text-decoration: none;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(255,255,255,0.08);
 }
 
-.linkedin-pill:hover {
-  background: var(--accent);
-  color: white;
+body.light .connect-links a {
+  background: rgba(0,0,0,0.05);
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 footer {
   text-align: center;
-  padding: 24px;
-  opacity: 0.6;
+  padding: 26px;
+  opacity: 0.7;
 }
 
-/* CURSOR GLOW */
-#cursor-glow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 300px;
-  height: 300px;
-  pointer-events: none;
-  background: radial-gradient(circle, rgba(61,169,255,0.25), transparent 60%);
-  filter: blur(50px);
-  transform: translate(-50%, -50%);
-  z-index: -1;
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  section {
+    margin: 24px;
+    padding: 26px;
+  }
 }
