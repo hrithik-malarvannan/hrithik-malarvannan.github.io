@@ -1,5 +1,5 @@
 :root {
-  --accent: #3da9ff;
+  --accent: #4dabff;
 }
 
 /* RESET */
@@ -9,64 +9,59 @@
   box-sizing: border-box;
 }
 
-/* BODY GRADIENT */
+/* LIGHT MODE */
 body {
   font-family: 'Poppins', sans-serif;
-  color: #eaeaea;
   background:
-    radial-gradient(700px 500px at 10% 10%, rgba(0,140,255,0.35), transparent 60%),
-    radial-gradient(700px 500px at 90% 90%, rgba(120,60,255,0.35), transparent 60%),
-    linear-gradient(135deg, #05070b, #0b0f18);
-  overflow-x: hidden;
+    radial-gradient(900px 400px at 20% 10%, rgba(77,171,255,0.25), transparent 60%),
+    radial-gradient(900px 400px at 80% 90%, rgba(180,200,255,0.25), transparent 60%),
+    linear-gradient(#f5f7fa, #e9edf3);
+  color: #222;
+  line-height: 1.7;
 }
 
-/* CURSOR GLOW */
-#cursor-glow {
-  position: fixed;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(0,140,255,0.25), transparent 60%);
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 0;
+/* DARK MODE */
+body.dark {
+  background:
+    radial-gradient(900px 400px at 20% 10%, rgba(77,171,255,0.35), transparent 60%),
+    radial-gradient(900px 400px at 80% 90%, rgba(120,80,255,0.35), transparent 60%),
+    linear-gradient(#0e1117, #111827);
+  color: #eaeaea;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 100px 20px;
-  position: relative;
-  z-index: 1;
+  padding: 90px 20px;
 }
 
 .hero h1 {
   font-size: 42px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .hero-tagline {
   color: var(--accent);
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-weight: 600;
+  margin-bottom: 18px;
 }
 
 .hero-text {
-  max-width: 720px;
-  margin: auto;
-  line-height: 1.8;
-  opacity: 0.85;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: inherit;
 }
 
 /* BUTTONS */
 .hero-buttons {
-  margin-top: 32px;
   display: flex;
   justify-content: center;
   gap: 18px;
+  margin-bottom: 24px;
 }
 
 .btn {
-  padding: 12px 28px;
+  padding: 12px 26px;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
@@ -82,107 +77,100 @@ body {
   color: var(--accent);
 }
 
-/* THEME TOGGLE */
+/* TOGGLE */
 #theme-toggle {
-  margin-top: 30px;
   padding: 10px 22px;
   border-radius: 999px;
+  border: 2px solid var(--accent);
   background: transparent;
-  border: 2px solid #aaa;
-  color: #fff;
+  color: inherit;
   cursor: pointer;
 }
 
-/* SECTIONS */
+/* MAIN */
 main {
   max-width: 1000px;
   margin: auto;
 }
 
+/* SECTIONS */
 section {
-  margin: 80px 20px;
-  padding: 40px;
-  background: rgba(255,255,255,0.04);
-  border-radius: 22px;
+  background: rgba(255,255,255,0.08);
+  margin: 40px 20px;
+  padding: 36px;
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
 }
 
+body.dark section {
+  background: rgba(20,20,30,0.7);
+}
+
+/* HEADINGS */
 section h2 {
   color: var(--accent);
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
-/* SKILLS */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.skill-card {
-  padding: 26px;
-  background: rgba(255,255,255,0.06);
-  border-radius: 20px;
-}
-
-.skill-tags span {
-  display: inline-block;
-  margin: 6px;
-  padding: 6px 14px;
-  background: var(--accent);
-  color: #000;
-  border-radius: 999px;
-  font-size: 13px;
-}
-
-/* PROJECTS */
+/* SKILLS & PROJECTS */
+.skills-grid,
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 26px;
 }
 
+.skill-card,
 .project-card {
   padding: 26px;
-  background: rgba(255,255,255,0.06);
   border-radius: 20px;
+  background: rgba(255,255,255,0.12);
+}
+
+body.dark .skill-card,
+body.dark .project-card {
+  background: rgba(30,30,45,0.8);
+}
+
+/* TAGS */
+.tags span {
+  display: inline-block;
+  background: var(--accent);
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin: 4px;
 }
 
 /* CONNECT */
 .connect-links {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   flex-wrap: wrap;
-  margin-top: 24px;
+  align-items: center;
 }
 
 .email-copy {
   display: flex;
   gap: 12px;
   align-items: center;
-  padding: 14px 20px;
+  background: rgba(255,255,255,0.15);
+  padding: 12px 18px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.08);
 }
 
 .email-copy button {
   background: var(--accent);
   border: none;
-  padding: 8px 16px;
   border-radius: 999px;
+  padding: 6px 14px;
   cursor: pointer;
-}
-
-.linkedin-btn {
-  padding: 14px 22px;
-  border-radius: 999px;
-  border: 2px solid var(--accent);
-  color: var(--accent);
-  text-decoration: none;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 40px;
+  padding: 24px;
   opacity: 0.7;
 }
