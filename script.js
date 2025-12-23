@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const toggleBtn = document.getElementById("theme-toggle");
+
+  // AOS
+  AOS.init({ once: false });
 
   // DARK MODE MEMORY
+  const toggleBtn = document.getElementById("theme-toggle");
   const savedTheme = localStorage.getItem("theme");
+
   if (savedTheme === "dark") {
     document.body.classList.add("dark");
     toggleBtn.textContent = "☀️ Light Mode";
@@ -15,11 +19,19 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleBtn.textContent = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
   });
 
-  // 🔥 AOS — ANIMATE EVERY TIME YOU SCROLL
-  AOS.init({
-    once: false,          // ← KEY CHANGE
-    duration: 900,
-    easing: "ease-in-out",
-    offset: 120
-  });
+  // COPY EMAIL
+  const copyBtn = document.getElementById("copy-email");
+  const emailText = document.getElementById("email-text");
+
+  if (copyBtn && emailText) {
+    copyBtn.addEventListener("click", () => {
+      navigator.clipboard.writeText("hrithik1413@gmail.com").then(() => {
+        copyBtn.textContent = "Copied!";
+        setTimeout(() => {
+          copyBtn.textContent = "Copy";
+        }, 1500);
+      });
+    });
+  }
+
 });
