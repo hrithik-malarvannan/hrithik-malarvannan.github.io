@@ -15,9 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleBtn.textContent = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
   });
 
-  // INIT AOS
+  // 🔥 AOS — ANIMATE EVERY TIME YOU SCROLL
   AOS.init({
-    once: true,
+    once: false,          // ← KEY CHANGE
+    duration: 900,
     easing: "ease-in-out",
     offset: 120
   });
