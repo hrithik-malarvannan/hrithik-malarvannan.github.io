@@ -1,16 +1,14 @@
-/* ---------- ACCENT ---------- */
 :root {
   --accent: #007bff;
 }
 
-/* BASE */
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
   background: #f5f5f5;
   color: #222;
   transition: background 0.3s, color 0.3s;
@@ -30,7 +28,7 @@ body {
 
 .hero-tagline {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600;
   color: var(--accent);
 }
 
@@ -52,7 +50,7 @@ body {
   padding: 10px 22px;
   border-radius: 25px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .btn.primary {
@@ -118,26 +116,14 @@ footer {
   padding: 12px;
 }
 
-/* ---------- ANIMATIONS ---------- */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* DARK MODE */
 body.dark {
   background: #121212;
   color: #e0e0e0;
 }
 
-body.dark section,
 body.dark .hero,
+body.dark section,
 body.dark footer {
   background: #1e1e1e;
 }
