@@ -1,74 +1,237 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hrithik M | Portfolio</title>
+:root {
+  --accent: #3da9ff;
+}
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+/* =========================
+   RESET
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+/* =========================
+   BODY – DEFAULT (DARK MODE)
+========================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  background:
+    radial-gradient(1200px 600px at 15% 10%, rgba(61,169,255,0.22), transparent 60%),
+    radial-gradient(1200px 600px at 85% 90%, rgba(100,80,255,0.18), transparent 60%),
+    linear-gradient(135deg, #0b0f14, #0f141b, #0b0f14);
+  color: #eaeaea;
+  line-height: 1.75;
+  transition: background 0.4s ease, color 0.3s ease;
+  min-height: 100vh;
+}
 
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* =========================
+   LIGHT MODE
+========================= */
+body.light {
+  background:
+    radial-gradient(1200px 600px at 15% 10%, rgba(61,169,255,0.25), transparent 60%),
+    radial-gradient(1200px 600px at 85% 90%, rgba(180,200,255,0.35), transparent 60%),
+    linear-gradient(135deg, #f4f6f8, #eef2f6, #f4f6f8);
+  color: #222;
+}
 
-  <!-- cursor glow -->
-  <div id="cursor-glow"></div>
+/* =========================
+   HERO
+========================= */
+.hero {
+  padding: 90px 20px;
+  text-align: center;
+  background: rgba(20,20,25,0.75);
+  backdrop-filter: blur(18px);
+  border-radius: 0 0 36px 36px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.45);
+}
 
-  <header class="hero">
-    <h1>Hi, I'm Hrithik M</h1>
-    <p class="hero-tagline">ECE Student at VIT Vellore | Aspiring Electronics Engineer</p>
-    <p class="hero-text">
-      Interested in embedded systems, digital design, and real-world hardware projects.
-      <br>
-      Currently serving as <strong>Event Head at IETE ISF, VIT Vellore</strong>.
-    </p>
+body.light .hero {
+  background: rgba(255,255,255,0.75);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
 
-    <div class="hero-buttons">
-      <a href="#resume" class="btn primary">📄 View Resume</a>
-      <a href="#connect" class="btn secondary">🔗 Let’s Connect</a>
-    </div>
+.hero h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
 
-    <button id="theme-toggle">🌙 Dark Mode</button>
-  </header>
+.hero-tagline {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
 
-  <main>
+.hero-text {
+  max-width: 720px;
+  margin: 0 auto 34px;
+  color: #cfd8e3;
+}
 
-    <section id="resume">
-      <h2>Resume</h2>
-      <p>You can view or download my resume below.</p>
-      <div class="resume-buttons">
-        <a href="Hrithik_M_Resume.pdf" target="_blank" class="btn primary">Open Resume</a>
-        <a href="Hrithik_M_Resume.pdf" download class="btn secondary">Download Resume</a>
-      </div>
-    </section>
+body.light .hero-text {
+  color: #555;
+}
 
-    <section id="connect">
-      <h2>Let’s Connect</h2>
-      <p>To connect, collaborate, or discuss opportunities, feel free to reach out.</p>
+/* =========================
+   BUTTONS
+========================= */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
 
-      <div class="connect-links">
-        <div class="email-copy">
-          <span>📧 hrithik1413@gmail.com</span>
-          <button id="copy-email">Copy</button>
-        </div>
+.btn {
+  padding: 12px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-        <a class="linkedin-pill"
-           href="https://www.linkedin.com/in/hrithik-m-795741375"
-           target="_blank" rel="noopener">
-          🔗 LinkedIn Profile
-        </a>
-      </div>
-    </section>
+.btn.primary {
+  background: linear-gradient(135deg, #3da9ff, #6a8dff);
+  color: #ffffff;
+}
 
-  </main>
+.btn.secondary {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
 
-  <footer>© 2025 Hrithik M</footer>
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+}
 
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
+/* =========================
+   THEME TOGGLE
+========================= */
+#theme-toggle {
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: 2px solid var(--accent);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* =========================
+   MAIN
+========================= */
+main {
+  max-width: 960px;
+  margin: auto;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+  background: rgba(25,25,35,0.75);
+  backdrop-filter: blur(18px);
+  margin: 44px 20px;
+  padding: 36px;
+  border-radius: 22px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+}
+
+body.light section {
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+section h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+section p {
+  margin-bottom: 16px;
+  max-width: 760px;
+  color: #d0d8e2;
+}
+
+body.light section p {
+  color: #444;
+}
+
+/* =========================
+   CONNECT
+========================= */
+.connect-links {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.email-copy {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.08);
+  padding: 12px 18px;
+  border-radius: 999px;
+}
+
+body.light .email-copy {
+  background: rgba(0,0,0,0.05);
+}
+
+.email-copy button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #3da9ff, #6a8dff);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.connect-links a {
+  padding: 12px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(255,255,255,0.08);
+}
+
+body.light .connect-links a {
+  background: rgba(0,0,0,0.05);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 26px;
+  opacity: 0.7;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  section {
+    margin: 24px;
+    padding: 26px;
+  }
+}
