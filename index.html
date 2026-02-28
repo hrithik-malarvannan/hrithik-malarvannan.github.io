@@ -10,15 +10,35 @@
 
 <body class="dark">
 
-<!-- NAV -->
+<!-- NAVBAR -->
 <nav class="nav">
-  <div class="logo">HRITHIK</div>
 
+  <!-- Hamburger -->
+  <div class="menu-btn" id="menuBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Signature -->
+  <div class="signature">H</div>
+
+  <!-- Theme Toggle -->
   <div class="toggle">
     <input type="checkbox" id="themeToggle">
     <label for="themeToggle"></label>
   </div>
+
 </nav>
+
+<!-- Fullscreen Menu -->
+<div class="menu-overlay" id="menuOverlay">
+  <ul>
+    <li><a href="#about">ABOUT</a></li>
+    <li><a href="#projects">PROJECTS</a></li>
+    <li><a href="#contact">CONTACT</a></li>
+  </ul>
+</div>
 
 <!-- HERO -->
 <section class="hero section">
@@ -37,7 +57,7 @@
 </section>
 
 <!-- ABOUT -->
-<section class="section">
+<section class="section" id="about">
   <div class="section-header">
     <h2>ABOUT</h2>
     <div class="line"></div>
@@ -61,7 +81,7 @@
 </section>
 
 <!-- PROJECTS -->
-<section class="section">
+<section class="section" id="projects">
   <div class="section-header">
     <h2>PROJECTS</h2>
     <div class="line"></div>
@@ -91,7 +111,7 @@
 </section>
 
 <!-- CONTACT -->
-<section class="section">
+<section class="section" id="contact">
   <div class="section-header">
     <h2>CONTACT</h2>
     <div class="line"></div>
