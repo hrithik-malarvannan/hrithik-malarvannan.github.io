@@ -69,20 +69,17 @@ body.light { background: #f5f5f5; color: #111; }
 
 /* Signature */
 .signature {
-  font-family: 'Luxurious Script', cursive;
-  font-size: 50px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 36px;
+  animation: glowPulse 2.5s infinite ease-in-out;
 }
 
-#signatureText {
-  background: linear-gradient(to right,
-    currentColor 0%,
-    currentColor 0%,
-    rgba(180,180,180,0.3) 0%,
-    rgba(180,180,180,0.3) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: 0.2s ease;
+body.dark .signature { color: var(--yellow); }
+body.light .signature { color: var(--blue); }
+
+@keyframes glowPulse {
+  0%,100% { opacity: 1; text-shadow: 0 0 10px currentColor; }
+  50% { opacity: 0.6; text-shadow: 0 0 25px currentColor; }
 }
 
 /* Toggle */
@@ -214,11 +211,15 @@ body.light .line { background: var(--blue); }
 .card {
   padding: 40px;
   border-radius: 8px;
+  transition: 0.4s;
   border: 1px solid transparent;
 }
 
 body.dark .card { background: #111; }
 body.light .card { background: white; }
+
+body.dark .card:hover { border-color: var(--yellow); }
+body.light .card:hover { border-color: var(--blue); }
 
 /* Contact */
 .contact-box { text-align: center; }
@@ -226,6 +227,7 @@ body.light .card { background: white; }
 .contact-link {
   display: block;
   font-size: 26px;
+  font-weight: 600;
   margin: 20px 0;
   text-decoration: none;
 }
