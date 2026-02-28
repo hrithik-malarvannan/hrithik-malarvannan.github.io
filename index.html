@@ -1,125 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>Hrithik M | ECE Portfolio</title>
-  <meta name="description" content="Hrithik M - ECE Student at VIT Vellore | Embedded Systems | FPGA | ESP32 Projects">
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HRITHIK | Electronics Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body class="dark">
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">Hrithik M</div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#connect">Connect</a></li>
-    </ul>
-  </nav>
+<!-- NAV -->
+<nav class="nav">
+  <div class="logo">HRITHIK</div>
 
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <h1>Hi, I'm <span>Hrithik M</span></h1>
-    <h2></h2>
+  <div class="toggle">
+    <input type="checkbox" id="themeToggle">
+    <label for="themeToggle"></label>
+  </div>
+</nav>
 
+<!-- HERO -->
+<section class="hero section">
+  <p class="subtitle">Electronics Engineer</p>
+  <h1>HRITHIK</h1>
+
+  <div class="hero-text">
     <p>
-      Interested in embedded systems, digital design, and real-world hardware projects.
-      <br/>
-      Currently serving as <strong>Event Head at IETE ISF, VIT Vellore</strong>.
+      I design and build embedded systems that bridge hardware and intelligence.
+      My focus lies in microcontrollers, digital design, and solving real-world
+      problems through electronics.
+    </p>
+  </div>
+
+  <div class="scroll">SCROLL</div>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+  <div class="section-header">
+    <h2>ABOUT</h2>
+    <div class="line"></div>
+  </div>
+
+  <div class="grid-2">
+    <div>
+      <p>
+        I enjoy working close to the hardware — understanding signals,
+        optimizing performance, and building systems that function reliably
+        beyond simulation environments.
+      </p>
+    </div>
+
+    <div>
+      <h3>B.Tech Electronics & Communication Engineering</h3>
+      <p>VIT Vellore</p>
+      <p>2024 — 2028</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section">
+  <div class="section-header">
+    <h2>PROJECTS</h2>
+    <div class="line"></div>
+  </div>
+
+  <div class="projects">
+    <div class="card">
+      <h3>ESP32 Prosthetic Arm</h3>
+      <p>Real-time EMG-controlled assistive hardware with WiFi interface.</p>
+    </div>
+
+    <div class="card">
+      <h3>Smart Storage Monitor</h3>
+      <p>Predictive storage health system with AI-based scoring.</p>
+    </div>
+
+    <div class="card">
+      <h3>FPGA Traffic Controller</h3>
+      <p>FSM-based digital traffic system using Verilog HDL.</p>
+    </div>
+
+    <div class="card">
+      <h3>Wearable Monitoring System</h3>
+      <p>Multi-sensor embedded health monitoring device.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section">
+  <div class="section-header">
+    <h2>CONTACT</h2>
+    <div class="line"></div>
+  </div>
+
+  <div class="contact-box">
+    <p class="contact-text">
+      Open to internships and hardware-focused opportunities.
     </p>
 
-    <div class="hero-buttons">
-      <a href="Hrithik_M_Resume.pdf" target="_blank" class="btn primary">View Resume</a>
-      <a href="#connect" class="btn outline">Let’s Connect</a>
-    </div>
+    <a href="mailto:hrithik1413@gmail.com" class="contact-link">
+      hrithik1413@gmail.com
+    </a>
 
-    <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="card">
-    <h3>Skills</h3>
-
-    <div class="grid-2">
-      <div class="sub-card">
-        <h4>Programming & Tools</h4>
-        <div class="tags">
-          <span>Python</span>
-          <span>Java</span>
-          <span>MATLAB</span>
-          <span>Verilog</span>
-        </div>
-      </div>
-
-      <div class="sub-card">
-        <h4>Hardware & Embedded</h4>
-        <div class="tags">
-          <span>ESP32</span>
-          <span>Arduino</span>
-          <span>FPGA</span>
-          <span>Digital Design</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="card">
-    <h3>Projects</h3>
-
-    <div class="grid-2">
-      <div class="project">
-        <h4>ESP32-based Prosthetic Arm</h4>
-        <p>
-          Designed a prosthetic arm using ESP32 with EMG-based servo control and WiFi dashboard.
-        </p>
-        <div class="tags">
-          <span>ESP32</span>
-          <span>Embedded</span>
-        </div>
-      </div>
-
-      <div class="project">
-        <h4>FPGA Traffic Light Controller</h4>
-        <p>
-          Implemented a traffic controller using Verilog HDL with timing FSM logic.
-        </p>
-        <div class="tags">
-          <span>FPGA</span>
-          <span>Verilog</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONNECT -->
-  <section id="connect" class="card connect">
-    <h3>Let’s Connect</h3>
-    <p>To collaborate or discuss opportunities, feel free to reach out.</p>
-
-    <div class="connect-box">
-      <span id="email">hrithik1413@gmail.com</span>
-      <button id="copyBtn">Copy</button>
-    </div>
-
-    <a class="linkedin" href="https://www.linkedin.com/in/hrithik-m-795741375" target="_blank">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM.4 8h4.2v14H.4V8zm7.6 0h4v2h.06c.56-1.06 1.94-2.18 3.99-2.18 4.27 0 5.05 2.81 5.05 6.46V22h-4.2v-6.88c0-1.64-.03-3.75-2.28-3.75-2.28 0-2.63 1.78-2.63 3.63V22H8V8z"/>
-      </svg>
+    <a href="https://www.linkedin.com/in/hrithik-m-795741375"
+       target="_blank"
+       class="linkedin-btn">
       LinkedIn Profile
     </a>
-  </section>
+  </div>
+</section>
 
-  <footer>© 2025 Hrithik M</footer>
+<!-- Custom Cursor -->
+<div class="cursor"></div>
+<div class="cursor-glow"></div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
-  
