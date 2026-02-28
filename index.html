@@ -3,20 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hrithik M | Portfolio</title>
 
-  <!-- Font -->
+  <title>Hrithik M | ECE Portfolio</title>
+  <meta name="description" content="Hrithik M - ECE Student at VIT Vellore | Embedded Systems | FPGA | ESP32 Projects">
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="dark">
 
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Hrithik M</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#connect">Connect</a></li>
+    </ul>
+  </nav>
+
   <!-- HERO -->
-  <section class="hero">
+  <section id="home" class="hero">
     <h1>Hi, I'm <span>Hrithik M</span></h1>
-    <h2>ECE Student at VIT Vellore | Aspiring Electronics Engineer</h2>
+    <h2></h2>
 
     <p>
       Interested in embedded systems, digital design, and real-world hardware projects.
@@ -25,26 +36,15 @@
     </p>
 
     <div class="hero-buttons">
-      <a class="btn primary">View Resume</a>
-      <a class="btn outline">Let’s Connect</a>
+      <a href="Hrithik_M_Resume.pdf" target="_blank" class="btn primary">View Resume</a>
+      <a href="#connect" class="btn outline">Let’s Connect</a>
     </div>
 
     <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
   </section>
 
-  <!-- RESUME -->
-  <section class="card">
-    <h3>Resume</h3>
-    <p>You can view or download my resume below.</p>
-
-    <div class="row">
-      <a class="btn primary">Open Resume</a>
-      <a class="btn outline">Download Resume</a>
-    </div>
-  </section>
-
   <!-- SKILLS -->
-  <section class="card">
+  <section id="skills" class="card">
     <h3>Skills</h3>
 
     <div class="grid-2">
@@ -71,19 +71,17 @@
   </section>
 
   <!-- PROJECTS -->
-  <section class="card">
+  <section id="projects" class="card">
     <h3>Projects</h3>
 
     <div class="grid-2">
       <div class="project">
         <h4>ESP32-based Prosthetic Arm</h4>
         <p>
-          Designed a prosthetic arm using ESP32 and Arduino with servo motor control
-          and EMG-based inputs.
+          Designed a prosthetic arm using ESP32 with EMG-based servo control and WiFi dashboard.
         </p>
         <div class="tags">
           <span>ESP32</span>
-          <span>Arduino</span>
           <span>Embedded</span>
         </div>
       </div>
@@ -91,22 +89,20 @@
       <div class="project">
         <h4>FPGA Traffic Light Controller</h4>
         <p>
-          Implemented a traffic light controller using Verilog HDL on FPGA
-          with proper timing logic.
+          Implemented a traffic controller using Verilog HDL with timing FSM logic.
         </p>
         <div class="tags">
           <span>FPGA</span>
           <span>Verilog</span>
-          <span>Digital</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CONNECT -->
-  <section class="card connect">
+  <section id="connect" class="card connect">
     <h3>Let’s Connect</h3>
-    <p>To connect, collaborate, or discuss opportunities, feel free to reach out.</p>
+    <p>To collaborate or discuss opportunities, feel free to reach out.</p>
 
     <div class="connect-box">
       <span id="email">hrithik1413@gmail.com</span>
