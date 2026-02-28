@@ -1,4 +1,4 @@
-/* THEME TOGGLE */
+/* Theme Toggle */
 
 const toggle = document.getElementById("themeToggle");
 const body = document.body;
@@ -11,17 +11,15 @@ if (localStorage.getItem("theme") === "light") {
 
 toggle.addEventListener("change", () => {
   if (toggle.checked) {
-    body.classList.remove("dark");
-    body.classList.add("light");
-    localStorage.setItem("theme", "light");
+    body.classList.replace("dark","light");
+    localStorage.setItem("theme","light");
   } else {
-    body.classList.remove("light");
-    body.classList.add("dark");
-    localStorage.setItem("theme", "dark");
+    body.classList.replace("light","dark");
+    localStorage.setItem("theme","dark");
   }
 });
 
-/* SCROLL REVEAL */
+/* Scroll Reveal */
 
 const sections = document.querySelectorAll('.section');
 
@@ -35,7 +33,16 @@ const observer = new IntersectionObserver(entries => {
 
 sections.forEach(section => observer.observe(section));
 
-/* DYNAMIC CURSOR */
+/* Menu Toggle */
+
+const menuBtn = document.getElementById("menuBtn");
+const menuOverlay = document.getElementById("menuOverlay");
+
+menuBtn.addEventListener("click", () => {
+  menuOverlay.classList.toggle("active");
+});
+
+/* Cursor */
 
 const cursor = document.querySelector(".cursor");
 const glow = document.querySelector(".cursor-glow");
