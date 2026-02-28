@@ -4,8 +4,7 @@ const toggle = document.getElementById("themeToggle");
 const body = document.body;
 
 if (localStorage.getItem("theme") === "light") {
-  body.classList.remove("dark");
-  body.classList.add("light");
+  body.classList.replace("dark","light");
   toggle.checked = true;
 }
 
@@ -40,6 +39,14 @@ const menuOverlay = document.getElementById("menuOverlay");
 
 menuBtn.addEventListener("click", () => {
   menuOverlay.classList.toggle("active");
+  menuBtn.classList.toggle("active");
+});
+
+document.querySelectorAll(".menu-overlay a").forEach(link => {
+  link.addEventListener("click", () => {
+    menuOverlay.classList.remove("active");
+    menuBtn.classList.remove("active");
+  });
 });
 
 /* Cursor */
