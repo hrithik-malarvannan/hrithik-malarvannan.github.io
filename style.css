@@ -1,7 +1,6 @@
 :root {
   --yellow: #d9ff00;
   --blue: #2563eb;
-  --black: #000;
 }
 
 * {
@@ -18,13 +17,12 @@ body {
   cursor: none;
 }
 
-/* DARK MODE */
+/* THEMES */
 body.dark {
   background: #000;
   color: #fff;
 }
 
-/* LIGHT MODE */
 body.light {
   background: #f5f5f5;
   color: #111;
@@ -36,12 +34,41 @@ body.light {
   justify-content: space-between;
   padding: 30px 8%;
   align-items: center;
+  position: relative;
+  z-index: 1001;
 }
 
-.logo {
+/* Hamburger */
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.menu-btn span {
+  width: 25px;
+  height: 2px;
+  background: currentColor;
+  transition: 0.3s;
+}
+
+/* Signature */
+.signature {
+  font-size: 28px;
   font-weight: 800;
+  animation: glowPulse 2.5s infinite ease-in-out;
 }
 
+body.dark .signature { color: var(--yellow); }
+body.light .signature { color: var(--blue); }
+
+@keyframes glowPulse {
+  0%,100% { opacity: 1; text-shadow: 0 0 10px currentColor; }
+  50% { opacity: 0.6; text-shadow: 0 0 30px currentColor; }
+}
+
+/* Toggle */
 .toggle input { display: none; }
 
 .toggle label {
@@ -70,6 +97,41 @@ body.light {
   transform: translateX(24px);
 }
 
+/* Overlay Menu */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(15px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+  transition: 0.5s ease;
+  z-index: 1000;
+}
+
+body.dark .menu-overlay { background: rgba(0,0,0,0.95); }
+body.light .menu-overlay { background: rgba(255,255,255,0.95); }
+
+.menu-overlay.active { transform: translateY(0); }
+
+.menu-overlay ul { list-style: none; text-align: center; }
+
+.menu-overlay li { margin: 20px 0; }
+
+.menu-overlay a {
+  font-size: 40px;
+  font-weight: 800;
+  text-decoration: none;
+  color: inherit;
+}
+
+body.dark .menu-overlay a:hover { color: var(--yellow); }
+body.light .menu-overlay a:hover { color: var(--blue); }
+
 /* HERO */
 .hero {
   text-align: center;
@@ -79,7 +141,6 @@ body.light {
 .subtitle {
   font-size: 14px;
   opacity: 0.6;
-  margin-bottom: 10px;
 }
 
 .hero h1 {
@@ -101,12 +162,11 @@ body.light .hero h1 {
 .hero-text {
   max-width: 700px;
   margin: 40px auto;
-  font-size: 18px;
   line-height: 1.6;
   opacity: 0.85;
 }
 
-/* SECTIONS */
+/* Sections */
 .section {
   padding: 100px 8%;
   opacity: 0;
@@ -126,10 +186,6 @@ body.light .hero h1 {
   margin-bottom: 60px;
 }
 
-.section-header h2 {
-  font-weight: 800;
-}
-
 .line {
   flex: 1;
   height: 2px;
@@ -138,14 +194,12 @@ body.light .hero h1 {
 body.dark .line { background: var(--yellow); }
 body.light .line { background: var(--blue); }
 
-/* GRID */
 .grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
 }
 
-/* PROJECTS */
 .projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -155,7 +209,7 @@ body.light .line { background: var(--blue); }
 .card {
   padding: 40px;
   border-radius: 8px;
-  transition: 0.4s ease;
+  transition: 0.4s;
   border: 1px solid transparent;
 }
 
@@ -172,10 +226,8 @@ body.light .card:hover {
   border-color: var(--blue);
 }
 
-/* CONTACT */
-.contact-box {
-  text-align: center;
-}
+/* Contact */
+.contact-box { text-align: center; }
 
 .contact-link {
   display: inline-block;
@@ -189,29 +241,12 @@ body.light .card:hover {
 body.dark .contact-link { color: var(--yellow); }
 body.light .contact-link { color: var(--blue); }
 
-.contact-link::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  left: 0;
-  bottom: -6px;
-  transition: 0.4s;
-}
-
-body.dark .contact-link::after { background: var(--yellow); }
-body.light .contact-link::after { background: var(--blue); }
-
-.contact-link:hover::after { width: 100%; }
-
 .linkedin-btn {
-  display: inline-block;
   padding: 14px 30px;
   border: 2px solid;
   border-radius: 40px;
   font-weight: 600;
   text-decoration: none;
-  transition: 0.3s;
 }
 
 body.dark .linkedin-btn {
@@ -224,16 +259,7 @@ body.light .linkedin-btn {
   color: var(--blue);
 }
 
-.linkedin-btn:hover {
-  background: currentColor;
-  color: #000;
-}
-
-body.light .linkedin-btn:hover {
-  color: #fff;
-}
-
-/* DYNAMIC CURSOR */
+/* Cursor */
 .cursor {
   width: 10px;
   height: 10px;
