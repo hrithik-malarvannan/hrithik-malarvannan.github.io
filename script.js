@@ -1,33 +1,15 @@
 const body = document.body;
 const toggle = document.getElementById("themeToggle");
 
-/* Theme */
-if (localStorage.getItem("theme") === "light") {
-  body.classList.replace("dark","light");
-  toggle.checked = true;
-}
-
+/* Theme toggle */
 toggle.addEventListener("change", () => {
   if (toggle.checked) {
     body.classList.replace("dark","light");
-    localStorage.setItem("theme","light");
   } else {
     body.classList.replace("light","dark");
-    localStorage.setItem("theme","dark");
   }
+  updateSignatureGlow();
 });
-
-/* Scroll Reveal */
-const sections = document.querySelectorAll('.section');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.15 });
-
-sections.forEach(section => observer.observe(section));
 
 /* Menu */
 const menuBtn = document.getElementById("menuBtn");
@@ -49,24 +31,28 @@ document.addEventListener("mousemove", (e) => {
   glow.style.top = e.clientY + "px";
 });
 
-/* Scroll-based partial glow */
+/* Partial signature glow */
 const signatureText = document.getElementById("signatureText");
 
-window.addEventListener("scroll", () => {
+function updateSignatureGlow() {
 
   const scrollTop = window.scrollY;
   const docHeight = document.body.scrollHeight - window.innerHeight;
-  const percent = (scrollTop / docHeight) * 100;
+  const percent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
 
-  const color = getComputedStyle(body).color;
+  const glowColor = body.classList.contains("dark")
+    ? "#d9ff00"
+    : "#2563eb";
 
-  signatureText.style.background = `
+  signatureText.style.backgroundImage = `
     linear-gradient(to right,
-      ${color} 0%,
-      ${color} ${percent}%,
-      rgba(150,150,150,0.3) ${percent}%,
-      rgba(150,150,150,0.3) 100%
+      ${glowColor} 0%,
+      ${glowColor} ${percent}%,
+      ${glowColor}40 ${percent}%,
+      ${glowColor}40 100%
     )
   `;
+}
 
-});
+window.addEventListener("scroll", updateSignatureGlow);
+window.addEventListener("load", updateSignatureGlow);
