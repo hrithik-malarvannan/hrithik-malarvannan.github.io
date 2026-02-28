@@ -140,11 +140,30 @@ body.light .navbar {
 }
 
 .theme-btn {
-  background: none;
+  background: transparent;
   border: 2px solid var(--blue);
-  padding: 10px 20px;
+  padding: 10px 22px;
   border-radius: 30px;
   cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+/* Dark Mode Text */
+body.dark .theme-btn {
+  color: #ffffff;
+}
+
+/* Light Mode Text */
+body.light .theme-btn {
+  color: #111827;
+}
+
+/* Hover Effect */
+.theme-btn:hover {
+  background: var(--blue);
+  color: white !important;
+  box-shadow: 0 8px 20px rgba(77,163,255,0.4);
 }
 
 /* CARDS */
